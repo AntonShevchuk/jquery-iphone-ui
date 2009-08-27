@@ -1,0 +1,761 @@
+/*Basic*/
+.iphone {
+	font: 75%/160% Helvetica, sans-serif;
+	color: #333;
+	position:relative;
+}
+    .iphone.vertical {
+        width:320px;
+        padding:124px 41px;
+        background:url('images/iphone-vertical.jpg') 0 0 no-repeat;
+    }
+    /* TODO */
+    .iphone.horizontal {
+        width:480px;
+        padding:0px 0px;
+        background:url('images/iphone-horizontal.jpg') 0 0 no-repeat;
+    }
+    
+.iphone a {
+    color: #333;
+    text-decoration:none;
+}
+.iphone a:active, .iphone a:focus {
+    outline: 0;
+}
+
+
+.iphone ul, ol, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+/*/Basic*/
+.iphone .phone {
+    position:relative;
+    display:block;
+    overflow:hidden;
+}
+.iphone .screen{
+    font-size:1.8em;
+    font-weight:600;
+    display:block;
+    background:#bbb;
+    background-image:url('images/background.png');
+    
+    position:absolute;
+    width:100%;
+    height:100%;  
+    overflow:hidden;
+}
+
+.iphone.vertical .phone,
+.iphone.vertical .screen,
+.iphone.vertical .scroll
+ {
+    width:320px;
+    height:480px;
+}
+    .iphone.vertical .topbar + .screen { height:460px }
+    .iphone.vertical .topbar + .screen      .scroll { height:460px }
+    .iphone.vertical .topbar + .screen .tab .scroll { height:412px }
+    .iphone.vertical .topbar + .screen      .titlebar + .scroll { height:415px }
+    .iphone.vertical .topbar + .screen .tab .titlebar + .scroll { height:367px }
+    .iphone.vertical .screen      .titlebar + .scroll { height:435px }
+    .iphone.vertical .screen .tab .titlebar + .scroll { height:387px }
+	
+    
+.iphone.horizontal .phone,
+.iphone.horizontal .screen,
+.iphone.horizontal .scroll {
+    width:480px;
+    height:320px;
+}
+    .iphone.horizontal .topbar + .screen { height:300px }
+    .iphone.horizontal .topbar + .screen      .scroll { height:300px }
+    .iphone.horizontal .topbar + .screen .tab .scroll { height:252px }
+    .iphone.horizontal .topbar + .screen      .titlebar + .scroll { height:255px }
+    .iphone.horizontal .topbar + .screen .tab .titlebar + .scroll { height:207px }
+    .iphone.horizontal .screen      .titlebar + .scroll { height:275px }
+    .iphone.horizontal .screen .tab .titlebar + .scroll { height:227px }
+
+
+.iphone .home .screen{
+    background:#000;
+}
+/*
+.iphone .screen .scroll {
+    height:100%;
+}
+*/
+/*TopBar*/
+.iphone.vertical .topbar {
+    display:block;
+    width:320px;
+    height:20px;
+    background-image:url('images/topbar-vertical.png');
+}
+.iphone.horizontal .topbar {
+    display:block;
+    width:480px;
+    height:20px;
+    background-image:url('images/topbar-horizontal.png');
+}
+.iphone .topbar.wifi {
+    background-position:0 -20px;
+}
+.iphone .topbar.g3 {
+    background-position:0 -40px;
+}
+/*/TopBar*/
+/*TitleBar*/
+.iphone .titlebar{
+    position:relative;
+    display:block;
+    width:100%;
+    height:45px;
+    line-height:45px;
+    font-size:1.3em;
+    font-weight:900;
+    color:#fff;
+    text-align:center;
+    text-shadow: #333 0px -1px 0px;
+    background-image:url('images/titlebar.png');
+}
+
+.iphone .titlebar a {  
+    color:#fff;
+    font-size:12px;
+    position:absolute;  
+    height:30px;
+    line-height:29px;
+    top:8px;
+    display:block;
+    background:url('images/titlebar-buttons.png') 0 0 no-repeat;
+}
+.iphone .titlebar a em {
+    display:block;
+    width:8px;
+    height:30px;
+    position:absolute;
+    top:0px;
+}
+.iphone .titlebar a.back{
+    left:6px;
+    padding-left:16px;    
+}
+.iphone .titlebar a.back em{
+    right:-8px;
+    background:url('images/titlebar-buttons.png') 100% 0 no-repeat;
+}
+
+.iphone .titlebar a:hover.back{ background-position:0 -32px }
+.iphone .titlebar a:hover.back em{ background-position:100% -32px }
+
+.iphone .titlebar a.forward{
+
+    right:6px;
+    padding-right:16px;   
+    background:url('images/titlebar-buttons.png') 100% -64px no-repeat;
+}
+
+.iphone .titlebar a.forward em{
+    left:-8px;
+    background:url('images/titlebar-buttons.png') 0 -64px no-repeat;
+}
+
+.iphone .titlebar a:hover.forward{ background-position:100% -96px }
+.iphone .titlebar a:hover.forward em{ background-position:0 -96px }
+
+/*/TitleBar*/
+/*Dock*/
+.iphone .dock {
+    display:block;
+    width:100%;
+    height:92px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:url('images/dock.png') repeat-x 0 0;
+}
+
+.iphone .dock .app{
+    height:92px;
+}
+.iphone .dock .app a{
+    height:92px;
+    line-height:170px;
+}
+/*/Dock*/
+/*Tabs*/
+.iphone .tabbar {
+	position:absolute !important;
+    bottom:0;
+    left:0;	
+}
+.iphone .tabs {
+    position:relative;
+}
+.iphone .tab {
+    /*display:none;*/
+    position:absolute;
+    left:0px;
+    height:480px;
+    width:100%
+}
+/*/Tabs*/
+
+/*TabBarIcons*/
+.iicon {
+    position:relative;
+}
+.iicon em{
+    position:absolute;
+    display: block;
+    width:48px;
+    height:48px;
+    background-image:url('images/icons.png');
+    background-repeat:no-repeat;
+}
+.iicon .refresh   {background-position:50% 0}
+.iicon .redo      {background-position:50% -48px}
+.iicon .loopback  {background-position:50% -96px}
+.iicon .squiggle  {background-position:50% -144px}
+
+.iicon .shuffle   {background-position:50% -192px}
+.iicon .magnify   {background-position:50% -240px}
+.iicon .marker    {background-position:50% -288px}
+.iicon .chat      {background-position:50% -336px}
+.iicon .chat2     {background-position:50% -384px}
+.iicon .medical   {background-position:50% -432px}
+.iicon .clock     {background-position:50% -480px}
+.iicon .eye       {background-position:50% -528px}
+.iicon .target    {background-position:50% -576px}
+.iicon .tag       {background-position:50% -624px}
+.iicon .tags      {background-position:50% -672px}
+.iicon .chartline {background-position:50% -720px}
+.iicon .chartbar  {background-position:50% -768px}
+.iicon .envelope  {background-position:50% -816px}
+.iicon .gear      {background-position:50% -864px}
+.iicon .gear2     {background-position:50% -912px}
+.iicon .skull     {background-position:50% -960px}
+.iicon .skull2    {background-position:50% -1008px}
+.iicon .bird      {background-position:50% -1056px}
+.iicon .gift      {background-position:50% -1104px}
+.iicon .weather   {background-position:50% -1152px}
+.iicon .bandaid   {background-position:50% -1200px}
+.iicon .planet    {background-position:50% -1248px}
+.iicon .star      {background-position:50% -1296px}
+.iicon .heart     {background-position:50% -1344px}
+.iicon .key       {background-position:50% -1392px}
+.iicon .ipod      {background-position:50% -1440px}
+.iicon .iphone    {background-position:50% -1488px}
+.iicon .cabinet   {background-position:50% -1536px}
+.iicon .coffee    {background-position:50% -1584px}
+.iicon .shopping  {background-position:50% -1632px}
+.iicon .toolbox   {background-position:50% -1680px}
+.iicon .suitcase  {background-position:50% -1728px}
+.iicon .airplane  {background-position:50% -1776px}
+.iicon .spraycan  {background-position:50% -1824px}
+.iicon .inbox     {background-position:50% -1872px}
+.iicon .frame     {background-position:50% -1920px}
+.iicon .photos    {background-position:50% -1968px}
+.iicon .filmroll  {background-position:50% -2016px}
+.iicon .shoebox   {background-position:50% -2064px}
+.iicon .movie1    {background-position:50% -2112px}
+.iicon .movie2    {background-position:50% -2160px}
+.iicon .fuel      {background-position:50% -2208px}
+.iicon .forkknife {background-position:50% -2256px}
+.iicon .battery   {background-position:50% -2304px}
+.iicon .beaker    {background-position:50% -2352px}
+.iicon .outlet    {background-position:50% -2400px}
+.iicon .pinetree  {background-position:50% -2448px}
+.iicon .house     {background-position:50% -2496px}
+.iicon .lock      {background-position:50% -2544px}
+.iicon .network   {background-position:50% -2592px}
+.iicon .cloud     {background-position:50% -2640px}
+.iicon .download  {background-position:50% -2688px}
+.iicon .bookmark  {background-position:50% -2736px}
+.iicon .flag      {background-position:50% -2784px}
+.iicon .signpost  {background-position:50% -2832px}
+.iicon .brightness {background-position:50% -2880px}
+.iicon .contrast  {background-position:50% -2928px}
+.iicon .runner    {background-position:50% -2976px}
+.iicon .zap       {background-position:50% -3024px}
+.iicon .note      {background-position:50% -3072px}
+.iicon .microphone {background-position:50% -3120px}
+.iicon .tshirt    {background-position:50% -3168px}
+.iicon .paperclip {background-position:50% -3216px}
+.iicon .display   {background-position:50% -3264px}
+.iicon .tv        {background-position:50% -3312px}
+.iicon .compass   {background-position:50% -3360px}
+.iicon .pin       {background-position:50% -3408px}
+.iicon .radar     {background-position:50% -3456px}
+.iicon .location  {background-position:50% -3504px}
+.iicon .phone     {background-position:50% -3552px}
+.iicon .baby      {background-position:50% -3600px}
+.iicon .ekg       {background-position:50% -3648px}
+.iicon .stopwatch {background-position:50% -3696px}
+.iicon .medicalbag {background-position:50% -3744px}
+.iicon .shoppingcart {background-position:50% -3792px}
+/*/TabBarIcons*/
+/*Applications*/
+.iphone .app{
+   display:block;
+   width:80px; 
+   height:80px;
+}
+
+.iphone .app a{
+    display:block;
+    width:80px; 
+    height:80px;
+    line-height:160px;
+    color:#fff;
+    font-size:12px;
+    text-align:center;
+}
+.iphone .app a:hover{
+    background:url('app/64x64/glossy.png') 8px 8px no-repeat;
+}
+.iphone .app.upackinglist{
+    background:url('app/64x64/upackinglist.png') 8px 8px no-repeat;
+}
+/*/Applications*/
+/*Buttons*/
+.iphone .bigbutton {
+    position:absolute;
+    display:block;
+    width:64px;
+    height:64px;
+    text-indent:-99999px;
+}
+.iphone.vertical .bigbutton {
+    left:170px;
+    bottom:42px;
+}
+.iphone .button {
+    cursor:pointer;
+    font-size:1.3em;
+    font-weight:900;
+    display:block;
+    height:70px;
+    width:320px;
+    line-height:70px;
+    text-align:center;
+    text-shadow: #333 0px -1px 0px;
+    background-image:url('images/buttons.png');
+    background-repeat:no-repeat;
+}
+
+.iphone .green, .iphone .green a,
+.iphone .black, .iphone .black a,
+.iphone .red,   .iphone .red a{
+    color:#fff;
+}
+
+.iphone .button.green { background-position:0 0 }
+.iphone .button.green:active { background-position:0 -350px }
+
+.iphone .button.white { background-position:0 -70px }
+.iphone .button.white:active { background-position:0 -420px }
+
+.iphone .button.black { background-position:0 -140px }
+.iphone .button.black:active { background-position:0 -490px }
+
+.iphone .button.orange { background-position:0 -210px }
+.iphone .button.orange:active { background-position:0 -560px }
+
+.iphone .button.red { background-position:0 -280px }
+.iphone .button.red:active { background-position:0 -630px }
+/*/Buttons*/
+/*Popup*/
+.iphone p.copypaste {
+    position:relative;
+}
+.iphone .popup {
+    position:absolute;
+    display:none;
+    z-index:200;
+}
+.iphone .popup.copypaste {
+    width:240px;
+    height:48px;
+    line-height:48px;
+    background:url('images/popup-copypaste.png') no-repeat 0 0;
+}
+
+.iphone .popup.copypaste .anchor {
+    position:absolute;
+    z-index:100;
+    bottom:-10px;
+    left:24px;
+    height:14px;
+    width:24px;
+    background:url('images/popup-copypaste-anchor.png') no-repeat 0 0;
+}
+
+.iphone .popup.copypaste ul{
+    width:100%;
+}
+.iphone .popup.copypaste li{
+    float:left;
+    font-weight:900;
+    text-shadow: #ccc 0px -1px 0px;
+    width:80px
+}
+.iphone .popup.copypaste li.separator{
+    background:url('images/popup-copypaste-separator.png') 0 0 no-repeat;
+    padding-left:1px;
+    margin-right:-1px;
+}
+.iphone .popup.copypaste li.separator a{
+    margin-right:1px;
+}
+.iphone .popup.copypaste li a{
+    color:#eee;
+    display:block;
+    text-align:center;
+}
+
+.iphone .popup.copypaste li.first a:hover{
+    background:url('images/popup-copypaste.png') no-repeat 0 -48px;
+}
+.iphone .popup.copypaste li a:hover{
+    background:url('images/popup-copypaste.png') no-repeat -32px -48px;
+}
+.iphone .popup.copypaste li.last a:hover{
+    background:url('images/popup-copypaste.png') no-repeat 100% -48px;
+}
+/*/Popup*/
+/*Editor*/
+.iphone .editor {
+    width:340px;
+    height:460px;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    
+    position:relative;
+}
+/*/Editor*/
+
+/*List*/
+.iphone .list {
+
+}
+.iphone .list h3 {
+    padding:0;
+    margin:0;
+    background: url(images/list-header.png) left top repeat-x;
+    color: #fff;
+    font-size:1em;
+    font-weight: 900;
+    text-indent: 12px;
+    text-shadow: #999 0 1px 0;
+    height: 24px;
+    line-height: 24px;
+}
+
+.iphone .list li {
+    background: #efefef;
+    border-top: solid 1px #ddd;
+    text-indent: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/*/List*/
+
+/*** Widgets ***/
+.iphoneui a {
+    color: #333;
+    text-decoration:none;
+}
+.iphoneui a:active, .iphoneui a:focus {
+    outline: 0;
+}
+/*Scroll*/
+.iscrollui{
+    position:relative;
+    overflow: hidden;
+}
+.iscrollbar{
+    position:absolute;
+    top:0px;
+    right:0px;
+    width:10px;
+    display:none;
+    z-index:999;
+}
+
+.iscrollbar div{
+    margin:2px;
+    width:6px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
+    background:rgba(0, 0, 0, 0.4);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#65000000, endColorstr=#65000000);
+
+}
+/*/Scroll*/
+/*Menu*/
+.imenuui {
+	margin: 0;
+    padding: 10px !important;
+}
+.imenuui li{
+    background: #FFFFFF;
+    position:relative;
+    width:100%;
+    height:44px;
+    border: 1px solid #999;
+    border-top: 0;
+}
+.imenuui li.first {
+    border-top:1px solid #999;
+    border-radius:10px 10px 0 0;
+    -moz-border-radius:10px 10px 0 0;
+    -khtml-border-radius:10px 10px 0 0;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+}
+.imenuui li.last {
+    border-radius:0 0 10px 10px;
+    -moz-border-radius:0 0 10px 10px;
+    -khtml-border-radius:0 0 10px 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+}
+.imenuui li.single {
+    border-top: 1px solid #999;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.imenuui li.active{
+    background:#2472d4;
+}
+.imenuui .icon{
+    text-indent:44px;
+}
+.imenuui .icon em{
+    top:-2px;
+    left:0px;
+}
+.imenuui li{
+    text-indent:16px;
+    line-height:44px;
+    text-shadow: #999 0px 0px 1px;
+}
+.imenuui li a{
+    display:block;
+    text-indent:16px;
+	text-decoration:none;
+    font-size:1em;
+    font-weight:900;
+    color: #333;
+    height:44px;
+    line-height:44px;
+    text-shadow: #ccc 0px 0px 1px;
+}
+
+.imenuui li .icheckboxui{
+    position:absolute;
+    right:10px;
+    top:8px;
+}
+
+.imenuui li .arrow { background:url(images/arrows.png) 98% 14px no-repeat }
+.imenuui li.active .arrow { background:url(images/arrows.png) 98% -57px no-repeat }
+
+.imenuui li.active a {
+    color:#eee;
+    text-shadow: #eee 0px 0px 1px;
+}
+.imenuui li a span{
+    position:absolute;
+    display:block;
+    height:44px;
+    right:32px;
+    top:0;    
+    color:#777;
+}
+.imenuui li.active a span{
+    color:#eee;
+    text-shadow: #eee 0px 0px 2px;
+}
+/*/Menu*/
+/*TabBar*/
+.itabsui {
+    display:block;
+    width:100%;
+    height:48px;
+	padding:0;
+	margin:0;
+    background:url('images/tabbar.png') repeat-x 0 0;
+}
+.itabsui li {
+    display:block;
+    float:left;
+    /*width:80px; setup in JS*/
+    height:48px;
+	padding:0;
+	margin:0;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    -webkit-border-radius: 6px    
+}
+.itabsui li em{
+    width:100% !important;
+    top:-6px;
+    left:0;
+}
+.itabsui li.active {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v//fyxAgAEACWgDXjXePfkAAAAASUVORK5CYII=);
+    background:rgba(255, 255, 255, 0.1);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#45FFFFFF, endColorstr=#45FFFFFF);    
+}
+.itabsui a{
+    display:block;
+    width:100%;
+    color:#ccc;  
+    font-size:10px;
+    font-weight:900;
+    text-align:center;
+    height:48px;
+    line-height:80px;
+}
+.itabsui .active a{
+    color:#fff; 
+    text-shadow: #fff 0px 0px 2px;
+}
+.itabsui .iicon{
+    /*position:absolute;*/
+    /*margin-top:-6px;*/
+}
+/*/TabBar*/
+/*Gallery*/
+.igalleryui {
+	background:#000 !important;
+	overflow:hidden;	
+}
+.igalleryui .frame {
+    width:auto;
+    position:relative;
+    cursor:pointer;
+    background:#000 !important;
+    padding:0 20px 0 0;
+}
+.igalleryui .slide{
+    float:left;
+    margin-left:20px;
+}
+/*/Gallery*/
+/*Checkbox*/
+.icheckboxui {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    cursor:pointer;
+    display:inline-block;
+    width:94px;
+    height:26px;
+    background: #2472d4 url('images/form-checkbox.png') 0 0 no-repeat;
+}
+.icheckboxui.off {
+    background-position: 100% 0;
+}
+.icheckboxui.active {
+    background-position: 0 100%;
+}
+.icheckboxui.active.off {
+    background-position: 100% 100%;
+}
+
+/*/Checkbox*/
+
+/*Input Text*/
+.iinputui, .ipasswordui {
+    background:url('images/form-input.png') 0 0 no-repeat;
+    height:32px;
+    display:inline-block;
+    padding-left:6px;
+    margin-right:6px;
+    
+}
+.iinputui input, .ipasswordui input{
+    background:url('images/form-input.png') 100% 0 no-repeat;
+    color:#333;
+    font-weight: 700;
+    border:0;
+    height:16px;
+    line-height:16px;
+    padding:8px 8px 8px 0;
+    margin-right:-6px;
+}
+
+.iinputui input:focus,
+.iinputui input:active,
+.ipasswordui input:focus,
+.ipasswordui input:active{
+    outline:none;
+}
+
+.iselectui {
+    position:relative;
+    height:186px;  
+    background:#fff;
+    font-size:18px;
+    font-weight:700;
+    padding:24px 0;
+}
+.iselectui select {
+    /*opacity:0;*/
+    display:none;
+}
+.iselectui .ioverflow{
+    position:absolute;
+    z-index:200;
+    height:234px;
+    margin:0 17px;
+    top:0;
+    background:url('images/form-select.png') repeat-x 0 100%;    
+}
+
+    .iselectui .ioverflow-left{
+        position:absolute;
+        left:-17px;
+        height:234px;
+        width:17px;    
+        background:url('images/form-select.png') no-repeat 0 0;  
+    }
+    .iselectui .ioverflow-right{
+        position:absolute;
+        right:-17px;
+        height:234px;
+        width:17px;    
+        background:url('images/form-select.png') no-repeat 100% 0;  
+    }
+
+.iselectui .ioptions {
+    height:186px;
+    overflow:hidden;
+}
+.iselectui ul{
+    padding:0;
+    margin:68px 16px 0 16px;
+}
+    .iselectui ul li{
+        height:44px;
+        line-height:44px;
+        
+    }
+/*/Input Text*/
+

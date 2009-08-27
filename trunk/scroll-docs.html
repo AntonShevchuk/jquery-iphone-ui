@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>iScroll Widget Documentation</title>
+    <link rel="stylesheet" href="css/style.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.disable.text.select.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iScroll.js"></script>
+	
+	<!-- Highlight code -->
+	<script type="text/javascript" src="http://scripts.hohli.com/brush/shCore.js"></script>
+	<script type="text/javascript" src="http://scripts.hohli.com/brush/shBrushJScript.js"></script>
+	<script type="text/javascript" src="http://scripts.hohli.com/brush/shBrushXml.js"></script>
+	<script type="text/javascript" src="http://scripts.hohli.com/brush/shBrushPhp.js"></script>
+	<link type="text/css" rel="stylesheet" href="http://scripts.hohli.com/brush/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="http://scripts.hohli.com/brush/styles/shThemeDefault.css"/>
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = 'http://scripts.hohli.com/brush/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+	
+    <script type="text/javascript">
+    $(document).ready(function(){
+		// alternative method of init widget
+    	$(".scroll").iScroll();
+    });
+    </script>
+	<style type="text/css">
+		.scroll {
+			height:200px;
+			margin:10px 0;			
+		}
+	</style> 
+</head>
+
+<body>
+	<div class="docs">
+		Requried:
+			<ul>
+				<li>jQuery UI Core</li>
+				<li>Mousewheel Plugin</li>
+				<li>Fixed size for element (see source code of this is page)</li>
+			</ul>
+			
+		Optional:
+			<ul>
+			    <li>Disable Text Select Plugin</li>
+			</ul>
+			
+		Example:
+			<pre class="brush: xml;">
+			    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
+			    <script type="text/javascript" src="js/jquery.js"></script>
+			    <script type="text/javascript" src="js/jquery-ui.js"></script>
+			    <script type="text/javascript" src="js/jquery.disable.text.select.js"></script>
+			    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+			    <script type="text/javascript" src="js/ui/ui.iScroll.js"></script>
+				<script type="text/javascript">
+			    $(document).ready(function(){
+					// jquery.iphone.js have autoloader, but you can use
+					// alternative method of init widget
+			    	$(".scroll").iScroll();
+			    });
+			    </script>
+				<style type="text/css">
+					.scroll {
+						height:200px;		
+					}
+				</style>
+			</pre>
+	</div>
+    <div class="scroll" style="color:#005">
+    	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia quam nec enim scelerisque porta.
+		In ut lorem ipsum. Proin iaculis viverra rutrum. Maecenas quis ante enim. Vestibulum ante ipsum primis
+		in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum luctus tristique feugiat. Morbi
+		dictum est dolor, at condimentum nisl. Ut id nunc augue, at luctus enim. Phasellus urna nunc, aliquam
+		sit amet rutrum ac, imperdiet in nunc. Cras mattis massa et est sodales ac auctor mi sagittis. Fusce
+		elementum ultrices nunc, eu scelerisque massa sodales quis. Aliquam bibendum accumsan nibh ut blandit.
+		Vestibulum suscipit leo vitae magna tincidunt pharetra. Sed consequat, ligula non pretium ultrices,
+		ligula enim venenatis urna, in scelerisque urna turpis vel neque. Praesent nibh urna, eleifend et
+		fringilla eu, pellentesque sit amet nisl.
+		</p>
+		<p>
+		Praesent venenatis dictum ante, et viverra diam ultrices et. Maecenas egestas augue eget nibh
+		consequat tempus. Quisque facilisis ipsum non mi molestie faucibus. Integer sapien est, mattis
+		eu suscipit nec, auctor id dolor. In hac habitasse platea dictumst. Duis adipiscing tristique
+		ipsum, ut tempus eros porta ut. Nulla enim quam, auctor ut venenatis at, pharetra eget enim.
+		Nam suscipit quam eu erat adipiscing aliquam. Etiam aliquet sagittis viverra. Ut ultricies,
+		neque nec bibendum commodo, sem arcu lobortis nunc, ut luctus tellus erat at sem.
+		</p>
+		<p>
+		Nullam sed elit quis tellus cursus elementum ut placerat dui. Vestibulum aliquam blandit lorem eu
+		auctor. Aliquam mi mauris, sodales eget imperdiet quis, feugiat quis velit. Sed vitae quam eu libero
+		rutrum ultrices. Praesent facilisis, tellus eu blandit facilisis, massa orci lacinia diam, et congue
+		nulla purus eget lectus. Nam vel sem risus, ac ullamcorper mauris. Pellentesque quis luctus augue.
+		Nullam id cursus est. Nulla molestie semper purus vitae dapibus. Sed egestas pretium enim fringilla
+		mollis. Fusce luctus, ante ut convallis dictum, eros magna pulvinar quam, quis facilisis ante est
+		vulputate orci. Vivamus nisl eros, blandit nec lacinia vel, euismod ut augue. Morbi leo tellus, gravida
+		non suscipit quis, dignissim bibendum leo. Quisque consectetur convallis diam eget egestas.
+		</p>
+		<p>
+		Duis massa leo, pulvinar nec congue fringilla, dapibus eu dui. Nulla at arcu mi. Donec lacinia nunc non
+		erat luctus sit amet ullamcorper ipsum pulvinar. Nullam auctor dictum arcu, a sagittis nunc eleifend
+		fermentum. Nullam nec mi non sem accumsan ullamcorper et vel diam. Vestibulum ac scelerisque neque.
+		Aliquam non ante sit amet sapien dapibus cursus. Sed ut velit justo. Duis eget felis vel turpis imperdiet
+		imperdiet vel vitae lorem. Ut rutrum faucibus urna et aliquet. Nulla sagittis sagittis enim, non
+		ullamcorper magna dignissim sit amet. Nullam nec ligula odio, vel ornare enim. Praesent eget nisi magna.
+		Vivamus orci mi, malesuada nec fermentum sit amet, posuere vel dolor. Phasellus tellus sem, sollicitudin
+		ac sollicitudin in, dignissim ac eros. Integer tincidunt laoreet sem, nec luctus lectus malesuada vestibulum.
+		Duis rutrum massa venenatis nunc imperdiet molestie.
+		</p>
+		<p>
+		Ut arcu diam, porta quis dapibus a, mattis quis enim. Nullam eget augue at ipsum accumsan suscipit. Ut
+		consectetur aliquam purus lobortis aliquam. Ut nibh lorem, accumsan ac convallis interdum, consequat in
+		nibh. Aenean eu scelerisque velit. Nam eget risus eu tellus congue porttitor vitae et nunc. Aenean leo sem,
+		dictum non semper egestas, mollis cursus justo. Pellentesque habitant morbi tristique senectus et netus et
+		malesuada fames ac turpis egestas. Curabitur faucibus rhoncus mi, sed dapibus nunc cursus vitae. Suspendisse
+		suscipit eros nec massa hendrerit lacinia. Sed condimentum est in massa molestie commodo.
+		</p>
+    </div>
+    <div class="scroll" style="color:#500">
+    	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia quam nec enim scelerisque porta.
+		In ut lorem ipsum. Proin iaculis viverra rutrum. Maecenas quis ante enim. Vestibulum ante ipsum primis
+		in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum luctus tristique feugiat. Morbi
+		dictum est dolor, at condimentum nisl. Ut id nunc augue, at luctus enim. Phasellus urna nunc, aliquam
+		sit amet rutrum ac, imperdiet in nunc. Cras mattis massa et est sodales ac auctor mi sagittis. Fusce
+		elementum ultrices nunc, eu scelerisque massa sodales quis. Aliquam bibendum accumsan nibh ut blandit.
+		Vestibulum suscipit leo vitae magna tincidunt pharetra. Sed consequat, ligula non pretium ultrices,
+		ligula enim venenatis urna, in scelerisque urna turpis vel neque. Praesent nibh urna, eleifend et
+		fringilla eu, pellentesque sit amet nisl.
+		</p>
+		<p>
+		Praesent venenatis dictum ante, et viverra diam ultrices et. Maecenas egestas augue eget nibh
+		consequat tempus. Quisque facilisis ipsum non mi molestie faucibus. Integer sapien est, mattis
+		eu suscipit nec, auctor id dolor. In hac habitasse platea dictumst. Duis adipiscing tristique
+		ipsum, ut tempus eros porta ut. Nulla enim quam, auctor ut venenatis at, pharetra eget enim.
+		Nam suscipit quam eu erat adipiscing aliquam. Etiam aliquet sagittis viverra. Ut ultricies,
+		neque nec bibendum commodo, sem arcu lobortis nunc, ut luctus tellus erat at sem.
+		</p>
+		<p>
+		Nullam sed elit quis tellus cursus elementum ut placerat dui. Vestibulum aliquam blandit lorem eu
+		auctor. Aliquam mi mauris, sodales eget imperdiet quis, feugiat quis velit. Sed vitae quam eu libero
+		rutrum ultrices. Praesent facilisis, tellus eu blandit facilisis, massa orci lacinia diam, et congue
+		nulla purus eget lectus. Nam vel sem risus, ac ullamcorper mauris. Pellentesque quis luctus augue.
+		Nullam id cursus est. Nulla molestie semper purus vitae dapibus. Sed egestas pretium enim fringilla
+		mollis. Fusce luctus, ante ut convallis dictum, eros magna pulvinar quam, quis facilisis ante est
+		vulputate orci. Vivamus nisl eros, blandit nec lacinia vel, euismod ut augue. Morbi leo tellus, gravida
+		non suscipit quis, dignissim bibendum leo. Quisque consectetur convallis diam eget egestas.
+		</p>
+		<p>
+		Duis massa leo, pulvinar nec congue fringilla, dapibus eu dui. Nulla at arcu mi. Donec lacinia nunc non
+		erat luctus sit amet ullamcorper ipsum pulvinar. Nullam auctor dictum arcu, a sagittis nunc eleifend
+		fermentum. Nullam nec mi non sem accumsan ullamcorper et vel diam. Vestibulum ac scelerisque neque.
+		Aliquam non ante sit amet sapien dapibus cursus. Sed ut velit justo. Duis eget felis vel turpis imperdiet
+		imperdiet vel vitae lorem. Ut rutrum faucibus urna et aliquet. Nulla sagittis sagittis enim, non
+		ullamcorper magna dignissim sit amet. Nullam nec ligula odio, vel ornare enim. Praesent eget nisi magna.
+		Vivamus orci mi, malesuada nec fermentum sit amet, posuere vel dolor. Phasellus tellus sem, sollicitudin
+		ac sollicitudin in, dignissim ac eros. Integer tincidunt laoreet sem, nec luctus lectus malesuada vestibulum.
+		Duis rutrum massa venenatis nunc imperdiet molestie.
+		</p>
+		<p>
+		Ut arcu diam, porta quis dapibus a, mattis quis enim. Nullam eget augue at ipsum accumsan suscipit. Ut
+		consectetur aliquam purus lobortis aliquam. Ut nibh lorem, accumsan ac convallis interdum, consequat in
+		nibh. Aenean eu scelerisque velit. Nam eget risus eu tellus congue porttitor vitae et nunc. Aenean leo sem,
+		dictum non semper egestas, mollis cursus justo. Pellentesque habitant morbi tristique senectus et netus et
+		malesuada fames ac turpis egestas. Curabitur faucibus rhoncus mi, sed dapibus nunc cursus vitae. Suspendisse
+		suscipit eros nec massa hendrerit lacinia. Sed condimentum est in massa molestie commodo.
+		</p>
+    </div>
+</body>
+</html>

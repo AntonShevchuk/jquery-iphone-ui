@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Form Elements</title>
+    <link rel="stylesheet" href="css/style.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iCheckBox.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iInput.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iPassword.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iSelect.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iScroll.js"></script>
+    <script type="text/javascript" src="js/jquery.dPassword.js"></script>
+    <script type="text/javascript" src="js/jquery.backgroundPosition.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){    	
+    	$("input:checkbox").iCheckBox();
+    	$("input:text").iInput();
+    	$("input:password").iPassword();
+    	
+    	$("select").iSelect();    
+//    	console.log($("select").width(), $("select").css("borderLeftWidth"));
+    	$(".scroll").iScroll();	
+    }); 
+    </script>
+    
+</head>
+
+<body>
+    <div class="iphone vertical">
+        <div class="phone">
+            <div class="topbar"></div>
+            <div class="screen">
+                <div class="titlebar">Form Elements</div>
+                <div class="scroll">
+                    <form action="form.php">
+                    <input type="submit" />
+                    <br/>
+                    <input type="text" id="login" name="login" value=""/>
+                    <label for="login">Login</label>
+                    <br/>
+                    
+                    <input type="password" id="password" name="password" value=""/>
+                    <label for="password">Password</label>
+                    <br/>
+    
+                    <input type="checkbox" id="remember" name="remember" value="1"/>
+                    <label for="remember">remember me</label>
+                    <br/>
+                    
+                    <input type="checkbox" id="noremember" name="noremember" value="1" checked="checked"/>
+                    <label for="moremember">forgot me</label>
+                    <br/>
+                    
+                    <select name="options" style="width:100%">
+                        <option>Option 1</option>
+                        <option selected="selected">Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                    </select>
+                   
+                    <input type="radio" name="type" id="type_abc" value="ABC" />
+                    <label for="type_abc">ABC</label>
+                    <br/>
+                    <br/>
+                    
+                    <input type="radio" name="type" id="type_def" value="DEF" />
+                    <label for="type_def">DEF</label>
+                    <br/>
+                    <br/>
+                    
+                    <input type="radio" name="type" id="type_ghi" value="GHI" />
+                    <label for="type_ghi">GHI</label>
+                    <br/>
+                    <br/>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <a href="/" class="bigbutton">Exit</a>
+    </div>
+</body>
+</html>

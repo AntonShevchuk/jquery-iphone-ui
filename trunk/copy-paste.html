@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Tooltips</title>
+    <link rel="stylesheet" href="css/style.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.copypaste.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){  	
+    	var X1 = 0;
+    	var X2 = 0;
+    	var Y1 = 0;
+    	var Y2 = 0;
+    	var TO = null;
+    	
+    	$("textarea.copypaste")
+        	.mousedown(function(event){
+        	    var rect = this.getClientRects();
+        	    X1 = event.clientX - rect[0].left;
+        	    Y1 = event.clientY - rect[0].top;
+        	})
+        	.mouseup(function(event){
+        	    var rect = this.getClientRects();
+        	    X2 = event.clientX - rect[0].left;
+        	    Y2 = event.clientY - rect[0].top;
+        	    if (X1!=X2 || Y1!=Y2)
+        	       showDialog();
+        	});
+    	
+    	function showDialog() {
+    	    clearTimeout(TO);
+    	    
+            var popup = $('.popup.copypaste');
+                popup.hide();
+            // found center of selection rectangle
+            var mouseX = X1 + Math.ceil((X2 - X1)/2);
+            var mouseY = Y1 + Math.ceil((Y2 - Y1)/2);
+            
+            if (mouseX <= 20) {
+                popup.css({left:0});
+                popup.find(".anchor").css({left:10});
+            } else if (mouseX <= 160) {
+                popup.css({left:0});
+                popup.find(".anchor").css({left:(mouseX-10)});
+            } else if (mouseX <= 300) {
+                popup.css({left:80});
+                popup.find(".anchor").css({left:(mouseX-88)});
+            } else {
+                popup.css({left:80});
+                popup.find(".anchor").css({left:210});
+            }
+            
+            if (mouseY <= 64) {
+                popup.css({top:(mouseY+28)});
+                popup.find(".anchor").hide();
+            } else {
+                popup.css({top:(mouseY-44)});
+                popup.find(".anchor").show();
+            }
+            
+	        popup.show();
+	        
+	        TO = setTimeout(function(){hideDialog()}, 3000);
+    	}
+    	
+    	function hideDialog() {
+    	    $(".popup.copypaste").hide();
+    	}
+    	
+//    	$("textarea.copypaste").select(function(e){ showDialog() });
+//    	$("textarea.copypaste").dblclick(function(e){ showDialog() });
+    	
+    	$(".popup.copypaste a").hover(function(){
+    	    clearTimeout(TO);
+    	},function(){    	    
+	        TO = setTimeout(function(){hideDialog()}, 3000);
+    	});
+    	
+    	$(".popup.copypaste a[name=cut]").click(function(){
+    	    $("textarea.copypaste").cut();
+    	    $(".popup.copypaste").hide();
+    	    return false;
+    	});
+    	$(".popup.copypaste a[name=copy]").click(function(){
+    	    $("textarea.copypaste").copy();
+    	    $(".popup.copypaste").hide();
+    	    return false;
+    	});
+    	$(".popup.copypaste a[name=paste]").click(function(){
+    	    $("textarea.copypaste").paste();
+    	    $(".popup.copypaste").hide();
+    	    return false;
+    	});
+    	
+    }); 
+    </script>
+</head>
+
+<body>
+    <div class="iphone vertical">
+        <div class="phone">
+            <div class="topbar"></div>
+            <div class="screen">
+                
+                <div class="popup copypaste">
+                    <ul>
+                        <li class="first"><a href="#" title="Select" name="cut">Cut</a></li>
+                        <li class="separator"><a href="#" title="Copy" name="copy">Copy</a></li>
+                        <li class="last separator"><a href="#" title="Paste" name="paste">Paste</a></li>
+                    </ul>
+                    <div class="anchor"></div>
+                </div>
+                
+                <textarea cols="37" rows="29" class="editor copypaste">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed lorem a arcu molestie egestas. Ut consectetur faucibus dictum. Suspendisse tincidunt cursus mauris et varius. Duis euismod justo sit amet turpis accumsan id volutpat enim luctus. Aliquam erat volutpat. Etiam tortor nisi, egestas vel consequat eget, consectetur feugiat neque. Ut turpis odio, ullamcorper quis placerat in, porta ut tellus. Pellentesque mi est, auctor a faucibus quis, sollicitudin vitae augue. Ut consectetur nisl at neque lobortis a commodo risus ornare. Mauris tempor turpis et nisl dignissim tristique. Integer non sapien et sem laoreet viverra ac nec lectus. Pellentesque urna enim, vehicula id pharetra in, molestie et ipsum. Donec laoreet metus ac dolor cursus porta blandit mauris mollis. Nulla at purus eget tortor accumsan fermentum. In pellentesque pretium gravida. Sed magna diam, dictum non laoreet et, bibendum eget justo. Curabitur eget enim enim, id congue ipsum.
+                
+                
+                Nulla vel urna et ipsum rhoncus posuere. Phasellus pulvinar mi tellus. Proin sed turpis non lectus gravida imperdiet. Nulla ut est sapien. Nullam pretium dolor mauris. Nulla non mauris id orci sagittis adipiscing. Nulla facilisi. Nulla iaculis interdum ultricies. Vestibulum fermentum felis in purus tempus pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent adipiscing auctor dictum. Praesent suscipit facilisis porttitor. Nullam pretium facilisis tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis lacinia, dolor in posuere gravida, turpis tortor ultrices purus, vitae cursus ipsum risus ut dolor.</textarea>
+                
+            </div>            
+        </div>
+        <a href="/" class="bigbutton">Exit</a>
+    </div>
+</body>
+</html>
