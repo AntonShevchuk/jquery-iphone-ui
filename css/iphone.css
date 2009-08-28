@@ -12,7 +12,7 @@
     /* TODO */
     .iphone.horizontal {
         width:480px;
-        padding:0px 0px;
+        padding:34px 142px;
         background:url('images/iphone-horizontal.jpg') 0 0 no-repeat;
     }
     
@@ -23,7 +23,10 @@
 .iphone a:active, .iphone a:focus {
     outline: 0;
 }
-
+.iphone a.external {
+    color: #33a;
+    text-decoration:underline;
+}
 
 .iphone ul, ol, li {
     margin:0;
@@ -438,7 +441,31 @@
     position:relative;
 }
 /*/Editor*/
+/*Text*/
+.iphone .text {
+	background:#fff !important;
+	font-size:14px;
+	font-weight: 400;
+    line-height: 24px;
+	text-indent: 12px;
+	padding:6px 4px;
+}
 
+.iphone h1,h2,h3 {
+	padding:12px;
+}
+
+.iphone .text ul,
+.iphone .text ol
+{
+}
+.iphone .text li
+{
+	list-style-position:inside;
+	list-style-type:circle !important;
+	padding-left:12px;
+}
+/*/Text*/
 /*List*/
 .iphone .list {
 

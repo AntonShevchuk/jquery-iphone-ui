@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>iMenu Widget Documentation</title>
-    <link rel="stylesheet" href="css/style.css" type='text/css' media='all' />
-    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/ui/ui.iMenu.js"></script>
-		
+    <title>iGallery Widget Documentation</title>
+    <link rel="stylesheet" href="../css/style.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="../css/iphone.css" type='text/css' media='all' />
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/jquery.iphone.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iGallery.js"></script>
+			
 	<!-- Highlight code -->
 	<script type="text/javascript" src="http://scripts.hohli.com/brush/shCore.js"></script>
 	<script type="text/javascript" src="http://scripts.hohli.com/brush/shBrushJScript.js"></script>
@@ -22,17 +23,27 @@
 	</script>
 	
     <script type="text/javascript">
-    $(document).ready(function(){        
-        $(".menu").iMenu();
+    $(document).ready(function(){
+        $('.gallery').iGallery();
     });
     </script>
+	<style type="text/css">
+		.gallery {
+			width:320px;
+			height:480px;
+		}
+		
+	</style>
 </head>
 
 <body>
+	
+	
 	<div class="docs">
 		Requried:
 			<ul>
 				<li>jQuery UI Core</li>
+				<li>Fixed size in CSS</li>
 			</ul>
 			
 		Example:
@@ -40,30 +51,27 @@
 			    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
 			    <script type="text/javascript" src="js/jquery.js"></script>
 			    <script type="text/javascript" src="js/jquery-ui.js"></script>
-			    <script type="text/javascript" src="js/ui/ui.iMenu.js"></script>
+    			<script type="text/javascript" src="js/ui/ui.iGallery.js"></script>
 			    <script type="text/javascript">
 				$(document).ready(function(){
 					// jquery.iphone.js have autoloader, but you can use
 					// alternative method of init widget
-			    	$(".menu").iMenu();
+			    	$('.gallery').iGallery();
 			    });
 			    </script>
 			</pre>
 	</div>
-    <ul class="menu">
-        <li><a href="#" title="Label 1" class="arrow">Label 1</a></li>
-        <li><a href="#" title="Label 2">Label 2</a></li>
-        <li><a href="#" title="Label 3">Label 3</a></li>
-        <li><a href="#" title="Label 4">Label 4</a></li>
-    </ul>
-    <ul class="menu">
-        <li><a href="#" title="Label 1" class="arrow">Single element</a></li>
-    </ul>
-    <ul class="menu">
-        <li><a href="#" title="Label 1" class="arrow">Label 1</a></li>
-        <li><a href="#" title="Label 2">Label 2</a></li>
-        <li><a href="#" title="Label 3">Label 3</a></li>
-        <li><a href="#" title="Label 4">Label 4</a></li>
-    </ul>
+	
+    <div class="gallery">
+        <img src="../app/upackinglist/images/home.jpg" alt="Home Screen"/>
+        <img src="../app/upackinglist/images/list.jpg" alt=""/>
+        <img src="../app/upackinglist/images/list_edit.jpg" alt=""/>
+        <img src="../app/upackinglist/images/list_new.jpg" alt=""/>
+        <img src="../app/upackinglist/images/pack_list.jpg" alt=""/>
+        <img src="../app/upackinglist/images/pack_list_cats.jpg" alt=""/>
+        <img src="../app/upackinglist/images/pack_list_edit.jpg" alt=""/>
+        <img src="../app/upackinglist/images/pack_list_edit2.jpg" alt=""/>
+    </div>
+
 </body>
 </html>
