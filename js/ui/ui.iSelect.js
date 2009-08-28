@@ -12,24 +12,25 @@
         _init: function(){
             var _self = this;
             
-            this.width     = this.element.width() + 
-                             parseInt(this.element.css("borderLeftWidth")) + 
-                             parseInt(this.element.css("borderRightWidth"));
-        	 
-            this.iselect   = this.element.wrap('<div class="iselectui"></div>').parent();
-            this.iselect.append('<div class="ioverflow"><div class="ioverflow-left"></div><div class="ioverflow-right"></div></div>');
-            this.iselect.append('<div class="ioptions"><ul></ul></div>');
-            // 34 - it's left+right side size
+            this.width     = this.element.outerWidth();
+							 
+            this.iselect   = this.element.wrap('<div class="iphoneui iselectui"></div>').parent();
+            this.iselect.append('<div class="ioverflow"></div>')
+						.append('<div class="ioverflow-left"></div>')
+						.append('<div class="ioverflow-right"></div>')
+						.append('<div class="ioptions"><ul></ul></div>');
+            
             this.iselect.css({width:this.width});
             
             this.select   = this.iselect.find('select');            
             this.selectUl = this.iselect.find('ul');
             
             this.overflow  = this.iselect.find('.ioverflow');
+			// 34 - it's left+right side size
             this.overflow.css({width:this.width - 34});
             
             this.offset = this.selectUl.offset();
-            // 68 - it's margin for set selct of first element
+            // 68 - it's margin for set select of first element
             this.marginTop = 68;
             this.selectEl  = 1;
             this.maxEl  = 0;

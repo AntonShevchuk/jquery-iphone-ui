@@ -52,7 +52,10 @@ iframe {
 	border-bottom: solid 1px #333;
 	margin: 10px 0 20px;
 }
-
+.iphone {
+	margin: 0 auto;
+	
+}
 .links {
 	font-size:0.8em;
 }

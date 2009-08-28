@@ -10,7 +10,11 @@
 (function($){
     $.widget('ui.iInput', {
          _init: function(){             
-             this.element.wrap($('<span />').addClass('iinputui'));             
+             this.element.wrap($('<div class="iphoneui iinputui"></div>'));
+			 
+			 if ($('label[for='+this.element.attr('id')+']').length > 0) {
+			 	 $('label[for='+this.element.attr('id')+']').addClass('ilabelui');
+			 }           
          }
     });
 })(jQuery);

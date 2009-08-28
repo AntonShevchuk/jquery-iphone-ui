@@ -4,16 +4,16 @@ iPhoneUI = {
 		'iInput',
 		'iPassword',
 		'iCheckBox',
-		'iRadio',
+		'iRadioButton',
 		'iSelect',
 		
 		// navigation widgets
 		'iMenu',
+		'iScroll', // should be loaded after build iMenu and before hide any elements by iTabs
 		'iTabs',
 		
 		// other widgets
-		'iGallery',
-		'iScroll'
+		'iGallery'
 	],
 	/**
 	 * Try to initialize all loaded widgets

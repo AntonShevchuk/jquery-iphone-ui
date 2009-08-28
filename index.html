@@ -1,77 +1,110 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2002/REC-xhtml1-20020801/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>jQuery iPhone UI</title>
-    <meta name="keywords" content="ajax, jquery, javascript, css, iphone, iphone interface, iphone ui" />
-    <meta name="description" content="jQuery and CSS examples of iPhone interface" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>iMenu Widget</title>
     <link rel="stylesheet" href="css/style.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
     <script type="text/javascript" src="js/jquery.js"></script>
-    <style type="text/css">
-    body {
-    	width: 700px !important;
-    }
-    </style>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.iphone.js"></script>
+	
+    <script type="text/javascript" src="js/other/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/other/jquery.disable.text.select.js"></script>
+    <script type="text/javascript" src="js/other/jquery.backgroundPosition.js"></script>	
+    <script type="text/javascript" src="js/other/jquery.dPassword.js"></script>
+	
+    <script type="text/javascript" src="js/ui/ui.iMenu.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iMenuManager.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iTabs.js"></script>
+	
+    <script type="text/javascript" src="js/ui/ui.iInput.js"></script>
+	<script type="text/javascript" src="js/ui/ui.iPassword.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iCheckBox.js"></script>
+	<script type="text/javascript" src="js/ui/ui.iRadioButton.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iSelect.js"></script>
+	
+    <script type="text/javascript" src="js/ui/ui.iGallery.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iScroll.js"></script>
+	
+    <script type="text/javascript">
+    $(document).ready(function(){
+		$('.screen').iMenuManager({
+			link   : 'a[href!=#]:not(.external)', // selector for bind goTo event
+			content: '.screen',    // what content load from target URL - default is body
+			title  : '.titlebar',  // where widget can found title - default is title
+			back   : '.titlebar'
+			});	
+    });
+    </script>
 </head>
+
 <body>
-	<h1>jQuery iPhone UI</h1>
-	<p>
-		This is JavaScript library for prototype iPhone interface on web pages		
-	</p>
-	
-	
-	<h2>Widgets</h2>
-    <h3>Menu</h3>
-	<p class="links">
-	    <a href="docs/menu-docs.html" title="Menu Docs">Example with docs</a> | 
-	    <a href="docs/menu.html" title="Menu">In iPhone GUI</a>
-	</p>
-	
-    <h3>Tabs</h3>
-	<p class="links">
-	    <a href="docs/tabs-docs.html" title="Tabs Docs">Example with docs</a> | 
-	    <a href="docs/tabs.html" title="Tabs">In iPhone GUI</a>
-	</p>
-	
-    <h3>Scrolling</h3>
-	<p class="links">
-	    <a href="docs/scroll-docs.html" title="Scrolling Docs">Example with docsscroll-docs.html</a> | 
-		<a href="docs/scroll.html" title="Scrolling">In iPhone GUI</a>
-	</p>
-    
-    <h3>Gallery</h3>
-	<p class="links">
-	    <a href="docs/gallery-docs.html" title="Gallery Docs">Example with docs</a> | 
-	    <a href="docs/gallery.html" title="Gallery">In iPhone GUI</a>
-	</p>
-    
-    <h3>Form elements</h3>
-	<p class="links">
-		<a href="docs/elements.html" title="Form elements">In iPhone GUI</a>
-	</p>
-	Consist follow widgets
-	<ul>
-		<li>iInput</li>
-		<li>iPassword</li>
-		<li>iCheckbox</li>
-		<li>iRadioButton</li>
-		<li>iSelect</li>		
-	</ul>
-    
-	<h2>Examples</h2>
-	<p>
-		Examples of using iPhone UI w/out widgets
-	</p>
-	<ul>
-    	<li><a href="docs/vertical.html" title="Homescreen Vertical">Homescreen Vertical</a></li>
-		<li><a href="docs/horizontal.html" title="Homescreen Horizontal">Homescreen Horizontal</a></li>
-    	<li><a href="docs/buttons.html" title="Buttons">Buttons</a></li>
-    	<li><a href="docs/copy-paste.html" title="Copy/Paste">Copy/Paste</a></li>
-	</ul>
-	
-    <p>In examples I use 
-		<a href="http://www.teehanlax.com/blog/?p=1628" title="iPhone GUI PSD 3.0" rel="nofollow">iPhone GUI PSD 3.0</a> and 
-		<a href="http://glyphish.com/" title="iPhone toolbar icons" rel="nofollow">iPhone toolbar icons</a>
-	</p>
+    <div class="iphone vertical">
+        <div class="phone">
+            <div class="topbar"></div>
+            <div class="screen">
+                <div class="titlebar">
+                    iPhone UI
+                </div>
+                <div class="scroll iscroll">
+	                <ul class="imenu">
+	                    <li>
+	                        <a href="docs/index.html" title="Documentation" class="arrow external">
+	                            Documentation
+	                        </a>
+	                    </li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li><a href="docs/scroll.html" title="Scroll" class="arrow">Scroll</a></li>
+	                    <li><a href="docs/tabs.html" title="Tabs" class="arrow">Tabs</a></li>
+	                    <li><a href="docs/gallery.html" title="Gallery" class="arrow">Gallery</a></li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li>
+	                        <a href="docs/elements.html" title="Form Elements" class="arrow">
+	                            Form Elements
+	                        </a>
+	                    </li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li>
+	                        <a href="http://code.google.com/p/jquery-iphone-ui/downloads/list" title="Download" class="arrow icon iicon external">
+	                            <em class="inbox"></em>
+	                            Download in archive
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://code.google.com/p/jquery-iphone-ui/issues/list" title="Source code" class="arrow icon iicon external">
+	                            <em class="paperclip"></em>
+	                            Bug reports
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://code.google.com/p/jquery-iphone-ui/source/checkout" title="Source code" class="arrow icon iicon external">
+	                            <em class="gear"></em>
+	                            Source code
+	                        </a>
+	                    </li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li>
+	                        <a href="http://anton.shevchuk.name" title="Anton Shevchuk" class="arrow icon iicon external">
+	                            <em class="house"></em>
+	                            Author Homepage
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://twitter.com/AntonShevchuk" title="Anton Shevchuk on Twitter" class="arrow icon iicon external">
+	                            <em class="bird"></em>
+	                            Author Twitter
+	                        </a>
+	                    </li>
+	                </ul>
+                </div>
+            </div>
+        </div>
+        <a href="http://iphone.hohli.com" class="bigbutton">Exit</a>
+    </div>
 </body>
 </html>
