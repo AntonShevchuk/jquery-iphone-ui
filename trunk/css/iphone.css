@@ -684,16 +684,24 @@
     margin-left:20px;
 }
 /*/Gallery*/
+
+/*Form Elements*/
+/*Label*/
+.ilabelui {
+
+}
+/*/Label*/
 /*Checkbox*/
 .icheckboxui {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -khtml-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -webkit-border-radius: 4px;
     cursor:pointer;
     display:inline-block;
     width:94px;
     height:26px;
+	line-height:26px;
     background: #2472d4 url('images/form-checkbox.png') 0 0 no-repeat;
 }
 .icheckboxui.off {
@@ -705,9 +713,30 @@
 .icheckboxui.active.off {
     background-position: 100% 100%;
 }
-
 /*/Checkbox*/
-
+/*Radiobutton*/
+.iradiobuttonui {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    cursor:pointer;
+    display:inline-block;
+    width:21px;
+    height:21px;
+	line-height:21px;
+    background: transparent url('images/form-radiobutton.png') 0 0 no-repeat;
+}
+.iradiobuttonui.on {
+    background-position: 100% 0;
+}
+.iradiobuttonui.active {
+    background-position: 0 100%;
+}
+.iradiobuttonui.active.on {
+    background-position: 100% 100%;
+}
+/*/Radiobutton*/
 /*Input Text*/
 .iinputui, .ipasswordui {
     background:url('images/form-input.png') 0 0 no-repeat;
@@ -724,7 +753,7 @@
     border:0;
     height:16px;
     line-height:16px;
-    padding:8px 8px 8px 0;
+    padding:10px 8px 8px 0;
     margin-right:-6px;
 }
 
@@ -734,7 +763,8 @@
 .ipasswordui input:active{
     outline:none;
 }
-
+/*/Input Text*/
+/*/Select*/
 .iselectui {
     position:relative;
     height:186px;  
@@ -758,14 +788,16 @@
 
     .iselectui .ioverflow-left{
         position:absolute;
-        left:-17px;
+        left:0;
+    top:0;
         height:234px;
         width:17px;    
         background:url('images/form-select.png') no-repeat 0 0;  
     }
     .iselectui .ioverflow-right{
         position:absolute;
-        right:-17px;
+        right:0;
+    top:0;
         height:234px;
         width:17px;    
         background:url('images/form-select.png') no-repeat 100% 0;  
@@ -784,5 +816,6 @@
         line-height:44px;
         
     }
-/*/Input Text*/
+/*/Select*/
+/*/Form Elements*/
 

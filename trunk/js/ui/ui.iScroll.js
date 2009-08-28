@@ -12,7 +12,7 @@
          _init: function(){
              var _self = this;
              
-        	 this.height = this.element.height();
+        	 this.height = this.element.outerHeight();
 			 
              // build in dom
 			 this.element.addClass('iphoneui');
@@ -34,7 +34,6 @@
              this.newY = 0;
              this.move = false;
              this.TO = null;
-             
              
         	 // scrollbar
         	 this.scrollbar  = this.container.find('.iscrollbar');

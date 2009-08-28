@@ -10,11 +10,15 @@
 (function($){
     $.widget('ui.iPassword', {
          _init: function(){
-             this.element.wrap($('<span />').addClass('ipasswordui'));             
+             this.element.wrap($('<div class="iphoneui ipasswordui"></div>'));             
              
              if (typeof $.fn.dPassword == 'function') {
                  this.element.dPassword();
              }
+			 
+			 if ($('label[for='+this.element.attr('id')+']').length > 0) {
+			 	 $('label[for='+this.element.attr('id')+']').addClass('ilabelui');
+			 }
          }
     });
 })(jQuery);

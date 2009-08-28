@@ -11,7 +11,7 @@
     $.widget('ui.iMenuManager', {
 		options:{
 			link   : 'a[href!=#]', // selector for bind goTo event
-			content: 'body',  // what content load from target URL - default is body
+			content: 'body > *',  // what content load from target URL - default is body children
 			title  : 'title', // where widget can found title - default is title
 			back   : 'body',  // back link container 
 			width  : 'auto',  // width of element

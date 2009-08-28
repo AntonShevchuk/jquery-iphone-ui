@@ -11,7 +11,7 @@
     $.widget('ui.iCheckBox', {
          _init: function(){
              var _self = this;
-             this.visualElement = $('<span />').addClass('iphoneui')
+             this.visualElement = $('<div>&nbsp;</div>').addClass('iphoneui')
 					 						   .addClass('icheckboxui')
                                                .bind('mouseenter.iCheckBox', function(){
                                                     $(this).addClass("active");
@@ -46,6 +46,11 @@
              if (!this.element.is(':checked')) {
                  this.visualElement.addClass('off');
              }
+			 
+			 if ($('label[for='+this.element.attr('id')+']').length > 0) {
+			 	 $('label[for='+this.element.attr('id')+']').addClass('ilabelui');
+			 } 
+			 
 			 this.element.before(this.visualElement);
 			 this.element.hide();
          }

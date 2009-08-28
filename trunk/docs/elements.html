@@ -9,10 +9,12 @@
     <script type="text/javascript" src="../js/jquery-ui.js"></script>
 	<script type="text/javascript" src="../js/jquery.iphone.js"></script>
 	
-    <script type="text/javascript" src="../js/ui/ui.iCheckBox.js"></script>
     <script type="text/javascript" src="../js/ui/ui.iInput.js"></script>
     <script type="text/javascript" src="../js/ui/ui.iPassword.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iCheckBox.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iRadioButton.js"></script>
     <script type="text/javascript" src="../js/ui/ui.iSelect.js"></script>
+	
     <script type="text/javascript" src="../js/ui/ui.iScroll.js"></script>
 	
     <script type="text/javascript" src="../js/other/jquery.dPassword.js"></script>
@@ -20,10 +22,13 @@
     <script type="text/javascript" src="../js/other/jquery.mousewheel.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){    	
+		// you can init all in manual
+		/*
     	$("input:checkbox").iCheckBox();
     	$("input:text").iInput();
     	$("input:password").iPassword();    	
     	$("select").iSelect();
+    	*/
     }); 
     </script>
     
@@ -35,45 +40,47 @@
             <div class="topbar"></div>
             <div class="screen">
                 <div class="titlebar">Form Elements</div>
-                <div class="scroll iscroll">
+                <div class="scroll iscroll form">
 					<form action="form.php">
-                    <input type="text" id="login" name="login" value=""/>
+                    <input class="iinput" type="text" id="login" name="login" value=""/>
                     <label for="login">Login</label>
                     <br/>
+                    <br/>
                     
-                    <input type="password" id="password" name="password" value=""/>
+                    <input class="ipassword" type="password" id="password" name="password" value=""/>
                     <label for="password">Password</label>
                     <br/>
+                    <br/>
     
-                    <input type="checkbox" id="remember" name="remember" value="1"/>
+                    <input class="icheckbox" type="checkbox" id="remember" name="remember" value="1"/>
                     <label for="remember">remember me</label>
                     <br/>
-                    
-                    <input type="checkbox" id="noremember" name="noremember" value="1" checked="checked"/>
-                    <label for="moremember">forgot me</label>
                     <br/>
                     
-                    <select name="options" style="width:100%">
+                    <input class="icheckbox" type="checkbox" id="noremember" name="noremember" value="1" checked="checked"/>
+                    <label for="noremember">forgot me</label>
+                    <br/>
+                    <br/>
+					
+                    <input class="iradiobutton" type="radio" name="type" id="type_abc" value="ABC" checked="checked" />
+                    <label for="type_abc">ABC</label>
+                    <input class="iradiobutton" type="radio" name="type" id="type_def" value="DEF" />
+                    <label for="type_def">DEF</label>
+                    <input class="iradiobutton" type="radio" name="type" id="type_ghi" value="GHI" />
+                    <label for="type_ghi">GHI</label>
+                    <br/>
+                    <br/>
+					
+                    <select class="iselect" name="options" style="width:100%">
                         <option>Option 1</option>
                         <option selected="selected">Option 2</option>
                         <option>Option 3</option>
                         <option>Option 4</option>
-                    </select>
-                   
-                    <input type="radio" name="type" id="type_abc" value="ABC" />
-                    <label for="type_abc">ABC</label>
+                    </select>                   
                     <br/>
                     <br/>
-                    
-                    <input type="radio" name="type" id="type_def" value="DEF" />
-                    <label for="type_def">DEF</label>
-                    <br/>
-                    <br/>
-                    
-                    <input type="radio" name="type" id="type_ghi" value="GHI" />
-                    <label for="type_ghi">GHI</label>
-                    <br/>
-                    <br/>
+					
+
                     <input type="submit" />
                     <br/>
                     </form>
