@@ -26,7 +26,7 @@ iPhoneUI = {
 			
 			if (typeof jQuery.fn[widget] == 'function') {
 				var el = jQuery('.'+selector)[widget]();
-				console.log(selector);
+				//console.log(selector);
 			}
 		}
 	},

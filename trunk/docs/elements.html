@@ -2,28 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Form Elements</title>
-    <link rel="stylesheet" href="css/style.css" type='text/css' media='all' />
-    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/ui/ui.iCheckBox.js"></script>
-    <script type="text/javascript" src="js/ui/ui.iInput.js"></script>
-    <script type="text/javascript" src="js/ui/ui.iPassword.js"></script>
-    <script type="text/javascript" src="js/ui/ui.iSelect.js"></script>
-    <script type="text/javascript" src="js/ui/ui.iScroll.js"></script>
-    <script type="text/javascript" src="js/jquery.dPassword.js"></script>
-    <script type="text/javascript" src="js/jquery.backgroundPosition.js"></script>
-    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <title>Form Elements Widgets</title>
+    <link rel="stylesheet" href="../css/style.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="../css/iphone.css" type='text/css' media='all' />
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../js/jquery.iphone.js"></script>
+	
+    <script type="text/javascript" src="../js/ui/ui.iCheckBox.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iInput.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iPassword.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iSelect.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iScroll.js"></script>
+	
+    <script type="text/javascript" src="../js/other/jquery.dPassword.js"></script>
+    <script type="text/javascript" src="../js/other/jquery.backgroundPosition.js"></script>
+    <script type="text/javascript" src="../js/other/jquery.mousewheel.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){    	
     	$("input:checkbox").iCheckBox();
     	$("input:text").iInput();
-    	$("input:password").iPassword();
-    	
-    	$("select").iSelect();    
-//    	console.log($("select").width(), $("select").css("borderLeftWidth"));
-    	$(".scroll").iScroll();	
+    	$("input:password").iPassword();    	
+    	$("select").iSelect();
     }); 
     </script>
     
@@ -35,10 +35,8 @@
             <div class="topbar"></div>
             <div class="screen">
                 <div class="titlebar">Form Elements</div>
-                <div class="scroll">
-                    <form action="form.php">
-                    <input type="submit" />
-                    <br/>
+                <div class="scroll iscroll">
+					<form action="form.php">
                     <input type="text" id="login" name="login" value=""/>
                     <label for="login">Login</label>
                     <br/>
@@ -75,6 +73,8 @@
                     <input type="radio" name="type" id="type_ghi" value="GHI" />
                     <label for="type_ghi">GHI</label>
                     <br/>
+                    <br/>
+                    <input type="submit" />
                     <br/>
                     </form>
                 </div>
