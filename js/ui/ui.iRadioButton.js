@@ -25,14 +25,24 @@
 												   _self._toggle();
                                 				   return false;
                                 			   });
-             if (this.element.is(':checked')) {
-                 this.visualElement.addClass('on');
-             }
+                                               
+            if (this.element.is(':checked')) {
+                this.visualElement.addClass('on');
+            }
 			 
-			 if ($('label[for='+this.element.attr('id')+']').length > 0) {
-			 	 $('label[for='+this.element.attr('id')+']').addClass('ilabelui');
-			 } 
+			if ($('label[for='+this.element.attr('id')+']').length > 0) {
+			 	$('label[for='+this.element.attr('id')+']').addClass('ilabelui');
+			} 
 
+            this.element.change(function(){
+                _self._toggle();
+                _self.element.trigger('on');
+            });
+            
+			this.element.bind('on', function(){
+				_self.visualElement.addClass("on");
+			});
+            
 			this.element.bind('off', function(){
 				_self.visualElement.removeClass("on");
 			});
