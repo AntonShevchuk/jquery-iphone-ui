@@ -146,6 +146,9 @@
             
             this.setUrl = function(url) {
                 this.url = url;
+                if (url.length == 0) {
+                    url = '#';
+                }
                 document.location.hash = url;
                 return this;
             };

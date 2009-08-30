@@ -10,7 +10,7 @@
 (function($){
     $.widget('ui.iInput', {
          _init: function(){             
-             this.element.wrap($('<div class="iphoneui iinputui"></div>'));
+             this.element.wrap($('<span/>').addClass('iphoneui').addClass('iinputui'));
 			 
 			 if ($('label[for='+this.element.attr('id')+']').length > 0) {
 			 	 $('label[for='+this.element.attr('id')+']').addClass('ilabelui');
