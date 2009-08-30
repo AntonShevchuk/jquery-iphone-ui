@@ -295,7 +295,7 @@
 .iicon .pin       {background-position:50% -3408px}
 .iicon .radar     {background-position:50% -3456px}
 .iicon .location  {background-position:50% -3504px}
-.iicon .phone     {background-position:50% -3552px}
+.iicon .phoneicon     {background-position:50% -3552px}
 .iicon .baby      {background-position:50% -3600px}
 .iicon .ekg       {background-position:50% -3648px}
 .iicon .stopwatch {background-position:50% -3696px}
@@ -336,6 +336,9 @@
 .iphone.vertical .bigbutton {
     left:170px;
     bottom:42px;
+}.iphone.horizontal .bigbutton {
+    right:58px;
+    top:160px;
 }
 .iphone .button {
     cursor:pointer;

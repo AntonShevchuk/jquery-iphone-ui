@@ -10,7 +10,7 @@
 (function($){
     $.widget('ui.iPassword', {
          _init: function(){
-             this.element.wrap($('<div class="iphoneui ipasswordui"></div>'));             
+             this.element.wrap($('<span/>').addClass('iphoneui').addClass('ipasswordui'));
              
              if (typeof $.fn.dPassword == 'function') {
                  this.element.dPassword();
