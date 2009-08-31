@@ -20,40 +20,47 @@
                                                     $(this).removeClass("active");
                                                })
                                                .bind('click.iCheckBox', function(e){
-                                				   if (typeof $.fx.step.backgroundPosition == 'function') {
-                                                       if (_self.element.is(':checked')) {
-                                                           $(this).css({backgroundPosition:'0% 100%'}); // need for opera
-                                                           $(this).animate({backgroundPosition:'(100% 100%)'},
-                                                                           300,
-                                                                           function(){
-                                                                               $(this).css({backgroundPosition:'100% 0%'});
-                                                                           });
-                                                       } else {
-                                                           $(this).css({backgroundPosition:'100% 100%'}); // need for opera
-                                                           $(this).animate({backgroundPosition:'(0% 100%)'},
-                                                                           300,
-                                                                           function(){
-                                                                               $(this).css({backgroundPosition:'0% 0%'});
-                                                                           });
-                                                       }
-                                				   } else {
-                                				       $(this).toggleClass("off");
-                                				   }
-                                				                                   					
+                                				   _self.toggle();                            					
                                 				   _self.element.click();
                                 				   return false;
                                 			   });
+											   
              if (!this.element.is(':checked')) {
                  this.visualElement.addClass('off');
              }
 			 
-			 if ($('label[for='+this.element.attr('id')+']').length > 0) {
-			 	 $('label[for='+this.element.attr('id')+']').addClass('ilabelui');
-			 } 
+			 $('label[for='+this.element.attr('id')+']').each(function(){
+			     $(this).addClass('ilabelui');
+				 // change status by label click
+				 $(this).click(function(){
+				 	 _self.toggle();
+				 });
+			 });
 			 
 			 this.element.before(this.visualElement);
 			 this.element.hide();
-         }
+         },
+		 toggle:function() {
+			if (typeof $.fx.step.backgroundPosition == 'function') {
+				if (this.element.is(':checked')) {
+					this.visualElement.css({backgroundPosition:'0% 100%'}); // need for opera
+					this.visualElement.animate({backgroundPosition:'(100% 100%)'},
+					               300,
+					               function(){
+					                   $(this).css({backgroundPosition:'100% 0%'});
+					               });
+				} else {
+					this.visualElement.css({backgroundPosition:'100% 100%'}); // need for opera
+					this.visualElement.animate({backgroundPosition:'(0% 100%)'},
+					               300,
+					               function(){
+					                   $(this).css({backgroundPosition:'0% 0%'});
+					               });
+				}
+			} else {
+				this.visualElement.toggleClass("off");
+			}                    
+		 }
         
     });
 })(jQuery);

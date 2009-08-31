@@ -3,12 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>iTabs Widget Documentation</title>
-    <link rel="stylesheet" href="css/style.css" type='text/css' media='all' />
-    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/ui/ui.iTabs.js"></script>
-    <script type="text/javascript" src="js/jquery.iphone.js"></script>
+    <link rel="stylesheet" href="../css/style.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="../css/iphone.css" type='text/css' media='all' />
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iTabs.js"></script>
+    <script type="text/javascript" src="../js/jquery.iphone.js"></script>
 	
 	<!-- Highlight code -->
 	<script type="text/javascript" src="http://scripts.hohli.com/brush/shCore.js"></script>
@@ -41,17 +41,29 @@
 			
 		Example:
 			<pre class="brush: xml;">
-			    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
-			    <script type="text/javascript" src="js/jquery.js"></script>
-			    <script type="text/javascript" src="js/jquery-ui.js"></script>
-			    <script type="text/javascript" src="js/ui/ui.iTabs.js"></script>
-				<script type="text/javascript">
+			    &lt;link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' /&gt;
+			    &lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
+			    &lt;script type="text/javascript" src="js/jquery-ui.js"&gt;&lt;/script&gt;
+			    &lt;script type="text/javascript" src="js/ui/ui.iTabs.js"&gt;&lt;/script&gt;
+				&lt;script type="text/javascript"&gt;
 			    $(document).ready(function(){
 					// jquery.iphone.js have autoloader, but you can use
 					// alternative method of init widget
 			    	$(".tabbar").iTabs();
 			    });
-			    </script>
+			    &lt;/script&gt;
+                
+                &lt;ul class="tabbar"&gt;
+                    &lt;li&gt;&lt;a class="iicon" href="#mail" title="Mail"&gt;&lt;em class="envelope"&gt;&lt;/em&gt;Mail&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class="iicon" href="#chat" title="Chat"&gt;&lt;em class="chat2"&gt;&lt;/em&gt;Chat&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class="iicon" href="#search" title="Search"&gt;&lt;em class="magnify"&gt;&lt;/em&gt;Search&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class="iicon" href="#options" title="Options"&gt;&lt;em class="gear2"&gt;&lt;/em&gt;Options&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;div id="mail" title="Mail"&gt;...&lt;/div&gt;
+                &lt;div id="chat" title="Chat"&gt;...&lt;/div&gt;
+                &lt;div id="search" title="Search"&gt;...&lt;/div&gt;
+                &lt;div id="options" title="Options"&gt;...&lt;/div&gt;
 			</pre>
 	</div>
 	

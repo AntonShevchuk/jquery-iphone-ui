@@ -32,7 +32,6 @@
 			width:320px;
 			height:480px;
 		}
-		
 	</style>
 </head>
 
@@ -48,30 +47,41 @@
 			
 		Example:
 			<pre class="brush: xml;">
-			    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
-			    <script type="text/javascript" src="js/jquery.js"></script>
-			    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    			<script type="text/javascript" src="js/ui/ui.iGallery.js"></script>
-			    <script type="text/javascript">
+			    &lt;link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' /&gt;
+			    &lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
+			    &lt;script type="text/javascript" src="js/jquery-ui.js"&gt;&lt;/script&gt;
+    			&lt;script type="text/javascript" src="js/ui/ui.iGallery.js"&gt;&lt;/script&gt;
+			    &lt;script type="text/javascript"&gt;
 				$(document).ready(function(){
 					// jquery.iphone.js have autoloader, but you can use
 					// alternative method of init widget
 			    	$('.gallery').iGallery();
 			    });
-			    </script>
+			    &lt;/script&gt;
+				&lt;div class="gallery" style="width:320px;height:480px;"&gt;					
+				    &lt;img src="../app/upackinglist/images/home.jpg" alt="Home Screen"/&gt;
+				    &lt;img src="../app/upackinglist/images/list.jpg" alt=""/&gt;
+				    &lt;img src="../app/upackinglist/images/list_edit.jpg" alt=""/&gt;
+				    &lt;img src="../app/upackinglist/images/list_new.jpg" alt=""/&gt;
+				    &lt;img src="../app/upackinglist/images/pack_list.jpg" alt=""/&gt;
+				    &lt;img src="../app/upackinglist/images/pack_list_cats.jpg" alt=""/&gt;
+				    &lt;img src="../app/upackinglist/images/pack_list_edit.jpg" alt=""/&gt;
+				    &lt;img src="../app/upackinglist/images/pack_list_edit2.jpg" alt=""/&gt;
+					
+				&lt;/div&gt;
 			</pre>
 	</div>
 	
-    <div class="gallery">
-        <img src="../app/upackinglist/images/home.jpg" alt="Home Screen"/>
-        <img src="../app/upackinglist/images/list.jpg" alt=""/>
-        <img src="../app/upackinglist/images/list_edit.jpg" alt=""/>
-        <img src="../app/upackinglist/images/list_new.jpg" alt=""/>
-        <img src="../app/upackinglist/images/pack_list.jpg" alt=""/>
-        <img src="../app/upackinglist/images/pack_list_cats.jpg" alt=""/>
-        <img src="../app/upackinglist/images/pack_list_edit.jpg" alt=""/>
-        <img src="../app/upackinglist/images/pack_list_edit2.jpg" alt=""/>
-    </div>
+	<div class="gallery">
+	    <img src="../app/upackinglist/images/home.jpg" alt="Home Screen"/>
+	    <img src="../app/upackinglist/images/list.jpg" alt=""/>
+	    <img src="../app/upackinglist/images/list_edit.jpg" alt=""/>
+	    <img src="../app/upackinglist/images/list_new.jpg" alt=""/>
+	    <img src="../app/upackinglist/images/pack_list.jpg" alt=""/>
+	    <img src="../app/upackinglist/images/pack_list_cats.jpg" alt=""/>
+	    <img src="../app/upackinglist/images/pack_list_edit.jpg" alt=""/>
+	    <img src="../app/upackinglist/images/pack_list_edit2.jpg" alt=""/>
+	</div>
 
 </body>
 </html>
