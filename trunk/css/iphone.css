@@ -9,7 +9,6 @@
         padding:124px 41px;
         background:url('images/iphone-vertical.jpg') 0 0 no-repeat;
     }
-    /* TODO */
     .iphone.horizontal {
         width:480px;
         padding:34px 142px;
@@ -220,87 +219,107 @@
     background-image:url('images/icons.png');
     background-repeat:no-repeat;
 }
-.iicon .refresh   {background-position:50% 0}
-.iicon .redo      {background-position:50% -48px}
-.iicon .loopback  {background-position:50% -96px}
-.iicon .squiggle  {background-position:50% -144px}
+.iicon .ii-refresh   {background-position:50% 0}
+.iicon .ii-redo      {background-position:50% -48px}
+.iicon .ii-loopback  {background-position:50% -96px}
+.iicon .ii-squiggle  {background-position:50% -144px}
 
-.iicon .shuffle   {background-position:50% -192px}
-.iicon .magnify   {background-position:50% -240px}
-.iicon .marker    {background-position:50% -288px}
-.iicon .chat      {background-position:50% -336px}
-.iicon .chat2     {background-position:50% -384px}
-.iicon .medical   {background-position:50% -432px}
-.iicon .clock     {background-position:50% -480px}
-.iicon .eye       {background-position:50% -528px}
-.iicon .target    {background-position:50% -576px}
-.iicon .tag       {background-position:50% -624px}
-.iicon .tags      {background-position:50% -672px}
-.iicon .chartline {background-position:50% -720px}
-.iicon .chartbar  {background-position:50% -768px}
-.iicon .envelope  {background-position:50% -816px}
-.iicon .gear      {background-position:50% -864px}
-.iicon .gear2     {background-position:50% -912px}
-.iicon .skull     {background-position:50% -960px}
-.iicon .skull2    {background-position:50% -1008px}
-.iicon .bird      {background-position:50% -1056px}
-.iicon .gift      {background-position:50% -1104px}
-.iicon .weather   {background-position:50% -1152px}
-.iicon .bandaid   {background-position:50% -1200px}
-.iicon .planet    {background-position:50% -1248px}
-.iicon .star      {background-position:50% -1296px}
-.iicon .heart     {background-position:50% -1344px}
-.iicon .key       {background-position:50% -1392px}
-.iicon .ipod      {background-position:50% -1440px}
-.iicon .iphone    {background-position:50% -1488px}
-.iicon .cabinet   {background-position:50% -1536px}
-.iicon .coffee    {background-position:50% -1584px}
-.iicon .shopping  {background-position:50% -1632px}
-.iicon .toolbox   {background-position:50% -1680px}
-.iicon .suitcase  {background-position:50% -1728px}
-.iicon .airplane  {background-position:50% -1776px}
-.iicon .spraycan  {background-position:50% -1824px}
-.iicon .inbox     {background-position:50% -1872px}
-.iicon .frame     {background-position:50% -1920px}
-.iicon .photos    {background-position:50% -1968px}
-.iicon .filmroll  {background-position:50% -2016px}
-.iicon .shoebox   {background-position:50% -2064px}
-.iicon .movie1    {background-position:50% -2112px}
-.iicon .movie2    {background-position:50% -2160px}
-.iicon .fuel      {background-position:50% -2208px}
-.iicon .forkknife {background-position:50% -2256px}
-.iicon .battery   {background-position:50% -2304px}
-.iicon .beaker    {background-position:50% -2352px}
-.iicon .outlet    {background-position:50% -2400px}
-.iicon .pinetree  {background-position:50% -2448px}
-.iicon .house     {background-position:50% -2496px}
-.iicon .lock      {background-position:50% -2544px}
-.iicon .network   {background-position:50% -2592px}
-.iicon .cloud     {background-position:50% -2640px}
-.iicon .download  {background-position:50% -2688px}
-.iicon .bookmark  {background-position:50% -2736px}
-.iicon .flag      {background-position:50% -2784px}
-.iicon .signpost  {background-position:50% -2832px}
-.iicon .brightness {background-position:50% -2880px}
-.iicon .contrast  {background-position:50% -2928px}
-.iicon .runner    {background-position:50% -2976px}
-.iicon .zap       {background-position:50% -3024px}
-.iicon .note      {background-position:50% -3072px}
-.iicon .microphone {background-position:50% -3120px}
-.iicon .tshirt    {background-position:50% -3168px}
-.iicon .paperclip {background-position:50% -3216px}
-.iicon .display   {background-position:50% -3264px}
-.iicon .tv        {background-position:50% -3312px}
-.iicon .compass   {background-position:50% -3360px}
-.iicon .pin       {background-position:50% -3408px}
-.iicon .radar     {background-position:50% -3456px}
-.iicon .location  {background-position:50% -3504px}
-.iicon .phoneicon     {background-position:50% -3552px}
-.iicon .baby      {background-position:50% -3600px}
-.iicon .ekg       {background-position:50% -3648px}
-.iicon .stopwatch {background-position:50% -3696px}
-.iicon .medicalbag {background-position:50% -3744px}
-.iicon .shoppingcart {background-position:50% -3792px}
+.iicon .ii-shuffle   {background-position:50% -192px}
+.iicon .ii-magnify   {background-position:50% -240px}
+.iicon .ii-marker    {background-position:50% -288px}
+.iicon .ii-chat      {background-position:50% -336px}
+.iicon .ii-chat2     {background-position:50% -384px}
+.iicon .ii-medical   {background-position:50% -432px}
+.iicon .ii-clock     {background-position:50% -480px}
+.iicon .ii-eye       {background-position:50% -528px}
+.iicon .ii-target    {background-position:50% -576px}
+.iicon .ii-tag       {background-position:50% -624px}
+.iicon .ii-tags      {background-position:50% -672px}
+.iicon .ii-chartline {background-position:50% -720px}
+.iicon .ii-chartbar  {background-position:50% -768px}
+.iicon .ii-envelope  {background-position:50% -816px}
+.iicon .ii-gear      {background-position:50% -864px}
+.iicon .ii-gear2     {background-position:50% -912px}
+.iicon .ii-skull     {background-position:50% -960px}
+.iicon .ii-skull2    {background-position:50% -1008px}
+.iicon .ii-bird      {background-position:50% -1056px}
+.iicon .ii-gift      {background-position:50% -1104px}
+.iicon .ii-weather   {background-position:50% -1152px}
+.iicon .ii-bandaid   {background-position:50% -1200px}
+.iicon .ii-planet    {background-position:50% -1248px}
+.iicon .ii-star      {background-position:50% -1296px}
+.iicon .ii-heart     {background-position:50% -1344px}
+.iicon .ii-key       {background-position:50% -1392px}
+.iicon .ii-ipod      {background-position:50% -1440px}
+.iicon .ii-iphone    {background-position:50% -1488px}
+.iicon .ii-cabinet   {background-position:50% -1536px}
+.iicon .ii-coffee    {background-position:50% -1584px}
+.iicon .ii-shopping  {background-position:50% -1632px}
+.iicon .ii-toolbox   {background-position:50% -1680px}
+.iicon .ii-suitcase  {background-position:50% -1728px}
+.iicon .ii-airplane  {background-position:50% -1776px}
+.iicon .ii-spraycan  {background-position:50% -1824px}
+.iicon .ii-inbox     {background-position:50% -1872px}
+.iicon .ii-frame     {background-position:50% -1920px}
+.iicon .ii-photos    {background-position:50% -1968px}
+.iicon .ii-filmroll  {background-position:50% -2016px}
+.iicon .ii-shoebox   {background-position:50% -2064px}
+.iicon .ii-movie1    {background-position:50% -2112px}
+.iicon .ii-movie2    {background-position:50% -2160px}
+.iicon .ii-fuel      {background-position:50% -2208px}
+.iicon .ii-forkknife {background-position:50% -2256px}
+.iicon .ii-battery   {background-position:50% -2304px}
+.iicon .ii-beaker    {background-position:50% -2352px}
+.iicon .ii-outlet    {background-position:50% -2400px}
+.iicon .ii-pinetree  {background-position:50% -2448px}
+.iicon .ii-house     {background-position:50% -2496px}
+.iicon .ii-lock      {background-position:50% -2544px}
+.iicon .ii-network   {background-position:50% -2592px}
+.iicon .ii-cloud     {background-position:50% -2640px}
+.iicon .ii-download  {background-position:50% -2688px}
+.iicon .ii-bookmark  {background-position:50% -2736px}
+.iicon .ii-flag      {background-position:50% -2784px}
+.iicon .ii-signpost  {background-position:50% -2832px}
+.iicon .ii-brightness {background-position:50% -2880px}
+.iicon .ii-contrast  {background-position:50% -2928px}
+.iicon .ii-runner    {background-position:50% -2976px}
+.iicon .ii-zap       {background-position:50% -3024px}
+.iicon .ii-note      {background-position:50% -3072px}
+.iicon .ii-microphone {background-position:50% -3120px}
+.iicon .ii-tshirt    {background-position:50% -3168px}
+.iicon .ii-paperclip {background-position:50% -3216px}
+.iicon .ii-display   {background-position:50% -3264px}
+.iicon .ii-tv        {background-position:50% -3312px}
+.iicon .ii-compass   {background-position:50% -3360px}
+.iicon .ii-pin       {background-position:50% -3408px}
+.iicon .ii-radar     {background-position:50% -3456px}
+.iicon .ii-location  {background-position:50% -3504px}
+.iicon .ii-phone     {background-position:50% -3552px}
+.iicon .ii-baby      {background-position:50% -3600px}
+.iicon .ii-ekg       {background-position:50% -3648px}
+.iicon .ii-stopwatch {background-position:50% -3696px}
+.iicon .ii-medicalbag {background-position:50% -3744px}
+.iicon .ii-shoppingcart {background-position:50% -3792px}
+.iicon .ii-dashboard {background-position:50% -3840px}
+.iicon .ii-dogpow    {background-position:50% -3888px}
+.iicon .ii-calendar  {background-position:50% -3936px}
+.iicon .ii-lightbulb {background-position:50% -3984px}
+.iicon .ii-trophy    {background-position:50% -4032px}
+.iicon .ii-camera    {background-position:50% -4080px}
+.iicon .ii-wineglass {background-position:50% -4128px}
+.iicon .ii-beerglass {background-position:50% -4176px}
+.iicon .ii-dumbells  {background-position:50% -4224px}
+.iicon .ii-lifebuoy  {background-position:50% -4272px}
+.iicon .ii-beaker2   {background-position:50% -4320px}
+.iicon .ii-testtube  {background-position:50% -4368px}
+.iicon .ii-thermometer {background-position:50% -4416px}
+.iicon .ii-pill      {background-position:50% -4464px}
+.iicon .ii-equalizer {background-position:50% -4512px}
+.iicon .ii-book      {background-position:50% -4560px}
+.iicon .ii-puzzlepiece {background-position:50% -4608px}
+.iicon .ii-palette   {background-position:50% -4656px}
+.iicon .ii-umbrella  {background-position:50% -4704px}
+.iicon .ii-coffee    {background-position:50% -4752px}
 /*/TabBarIcons*/
 /*Applications*/
 .iphone .app{
@@ -774,7 +793,7 @@
     background:#fff;
     font-size:18px;
     font-weight:700;
-    padding:24px 0;
+    padding:18px 0;
 }
 .iselectui select {
     /*opacity:0;*/
@@ -800,19 +819,19 @@
     .iselectui .ioverflow-right{
         position:absolute;
         right:0;
-    top:0;
+    	top:0;
         height:234px;
         width:17px;    
         background:url('images/form-select.png') no-repeat 100% 0;  
     }
 
 .iselectui .ioptions {
-    height:186px;
+    height:194px;
     overflow:hidden;
 }
 .iselectui ul{
     padding:0;
-    margin:68px 16px 0 16px;
+    margin:74px 16px 0 16px;
 }
     .iselectui ul li{
         height:44px;

@@ -38,17 +38,23 @@
 			
 		Example:
 			<pre class="brush: xml;">
-			    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
-			    <script type="text/javascript" src="js/jquery.js"></script>
-			    <script type="text/javascript" src="js/jquery-ui.js"></script>
-			    <script type="text/javascript" src="js/ui/ui.iMenu.js"></script>
-			    <script type="text/javascript">
+			    &lt;link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' /&gt;
+			    &lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
+			    &lt;script type="text/javascript" src="js/jquery-ui.js"&gt;&lt;/script&gt;
+			    &lt;script type="text/javascript" src="js/ui/ui.iMenu.js"&gt;&lt;/script&gt;
+			    &lt;script type="text/javascript"&gt;
 				$(document).ready(function(){
 					// jquery.iphone.js have autoloader, but you can use
 					// alternative method of init widget
 			    	$(".menu").iMenu();
 			    });
-			    </script>
+			    &lt;/script&gt;
+                &lt;ul class="menu"&gt;
+                    &lt;li&gt;&lt;a href="#" title="Label 1" class="arrow"&gt;Label 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" title="Label 2"&gt;Label 2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" title="Label 3"&gt;Label 3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" title="Label 4"&gt;Label 4&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
 			</pre>
 	</div>
     <ul class="menu">

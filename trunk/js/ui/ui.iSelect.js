@@ -12,6 +12,10 @@
         _init: function(){
             var _self = this;
             
+            // 74 - it's margin for set select of first element
+			this._marginTop = 74;
+			this._liHeight  = 44;
+			
             this.width     = this.element.outerWidth();
 							 
             this.iselect   = this.element.wrap('<div class="iphoneui iselectui"></div>').parent();
@@ -30,8 +34,7 @@
             this.overflow.css({width:this.width - 34});
             
             this.offset = this.selectUl.offset();
-            // 68 - it's margin for set select of first element
-            this.marginTop = 68;
+            this.marginTop = this._marginTop;
             this.selectEl  = 1;
             this.maxEl  = 0;
 
@@ -51,8 +54,8 @@
     	    });
             
     	    // 44 - it's one element hight
-            this.maxMargin = 68;
-            this.minMargin = 68 + 44 - this.selectUl.height();
+            this.maxMargin = this._marginTop;
+            this.minMargin = this._marginTop + this._liHeight - this.selectUl.height();
             
             
             this._select(this.selectEl);
@@ -86,7 +89,7 @@
             $(document).mouseup(function(event){
                 if (_self.move) {
                     _self.move = false;
-                    _self.selectEl = Math.round(-(_self.marginTop - 68)/44) + 1;
+                    _self.selectEl = Math.round(-(_self.marginTop - _self._marginTop)/_self._liHeight) + 1;
                     _self._select(_self.selectEl);
                 }
             });
@@ -113,7 +116,7 @@
         },
         _select: function(index) {
             this.selectUl.stop(true,true);
-            this.marginTop = 68 - (44 * (index-1));
+            this.marginTop = 74 - (44 * (index-1));
             this.select.find("option:selected").removeAttr("selected");
             this.select.find("option:nth-child("+index+")").attr("selected", "selected");
             this.selectUl.animate({'marginTop':this.marginTop});
