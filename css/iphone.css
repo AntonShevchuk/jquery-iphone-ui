@@ -82,7 +82,7 @@
     .iphone.horizontal .screen .tab .titlebar + .scroll { height:227px }
 
 
-.iphone .home .screen{
+.iphone .screen.home {
     background:#000;
 }
 /*

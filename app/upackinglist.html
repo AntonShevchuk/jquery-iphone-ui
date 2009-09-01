@@ -24,7 +24,7 @@
     <script type="text/javascript">
     $(document).ready(function(){
 		$('.screen').iMenuManager({
-			link   : 'a[href!=#]:not(.external)', // selector for bind goTo event
+			link   : 'a[href!=#]:not(.external):not(.bigbutton)', // selector for bind goTo event
 			content: '.screen',    // what content load from target URL - default is body
 			title  : '.titlebar',  // where widget can found title - default is title
 			back   : '.titlebar'
@@ -36,7 +36,6 @@
 <body>
     <div class="iphone vertical">
         <div class="phone">
-            <div class="topbar"></div>
             <div class="screen">
                 <div class="titlebar">
                     uPackingList
