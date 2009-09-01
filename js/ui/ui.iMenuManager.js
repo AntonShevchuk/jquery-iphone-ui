@@ -109,7 +109,7 @@
                 curr_screen.remove();
                 delete _self._screens[_self.currentIndex+1];
             });
-            prev_screen.animate({left:"+="+this.options.width});
+            prev_screen.animate({left:0});
         },
 		/**
 		 * Interval callback function
@@ -190,9 +190,10 @@
                         _self.screen = $(html).find(manager.options.content);
 						_self.setTitle(_self.screen.find(manager.options.title).html());
                         _self.screen.css({
+							   top:-manager.options.height,
                                left:manager.options.width,
-							   width:manager.options.width,
-							   height:manager.options.height
+							   width:manager.options.width/*,
+							   height:manager.options.height*/
                             });
 							
                         if (manager._previous()) {
@@ -209,7 +210,7 @@
 						}
                         manager.element.parent().append(_self.screen);
 
-                        _self.screen.animate({left:"-="+manager.options.width});
+                        _self.screen.animate({left:0});
                         
                         // reinit all widgets
                         iPhoneUI.initWidgets();

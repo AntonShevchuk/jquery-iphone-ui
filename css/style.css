@@ -2,9 +2,38 @@ body {
 	margin: 30px auto;
 	padding: 0;
 	width: 800px;
-	font: 75%/160% Arial, Helvetica, sans-serif;
 	color: #333333;
 }
+
+/*@media only screen and (max-device-width: 480px) {*/
+	html,body {
+		width:100% !important;
+	    margin:0 !important;
+		min-height:320px !important;
+		max-height:480px !important;
+	}
+/*}*/
+
+/*
+@media only screen and (max-device-width: 480px) {
+	html,body {
+		height:320px !important;
+		max-height:320px !important;
+		width:100% !important;
+		max-width:100% !important;
+	    margin:0 !important;
+	}
+}*/
+/*
+@media only screen and (max-device-width: 320px) { 
+	html,body {
+		height:480px !important;
+		max-height:480px !important;
+		width:320px !important;
+		max-width:320px !important;
+	    margin:0 !important;
+	}
+}*/
 code {
 	font: 120% "Courier New", Courier, monospace;
 	white-space: nowrap;
