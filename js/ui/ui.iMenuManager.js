@@ -26,13 +26,15 @@
 				$this.addClass('iphoneui');
 			
 			// change default options
-			this.options.width  = this.element.width();
-			this.options.height = this.element.height();
+			this.options.width  = this.element.outerWidth();
+			this.options.height = this.element.outerHeight();
 			
             var current = new this._screen(this);
                 current.init('');
                 current.setScreen($this);
                 
+			
+			this.element.parent().height($this.height());
             this._screens[this._index] = current;
 
 			// all links in widget
@@ -83,6 +85,7 @@
 			
 			this._screens[this._index] =  new this._screen(this);
 			this._screens[this._index].load(url);
+
         },
 		
 		/**
@@ -105,6 +108,8 @@
             var prev_screen = prev.getScreen();
             var curr_screen = curr.getScreen();
 
+			this.element.parent().height(prev.getScreen().height());
+			
             curr_screen.animate({left:"+="+this.options.width}, function(){
                 curr_screen.remove();
                 delete _self._screens[_self.currentIndex+1];
@@ -121,18 +126,37 @@
 			var hash = document.location.hash;
 				hash = hash.length?hash.substr(1):'';
 				
-			if (   hash && this._current()
-				&& hash != this._current().getUrl()
-				&& this._screens[this._index].getScreen().find('a[href$='+hash+']').length) {
-				this._goTo(hash);
-				return;
-			}
+			/*
+			 - check current url hash 
+			   - is empty
+			      - index equal zero - return
+			      - index > zero - goBack
+			   - is exist
+			      - index equal zero - try found link and goTo
+			      - index > zero - check hash with current
+			 
+			 */
 			
-			if (this._index > 0
-				&& this._current()
-				&& hash != this._current().getUrl()) {
-				this._goBack();
-				return;
+			if (hash.length == 0) {
+				if (this._index == 0) {
+					return;
+				} else {
+					this._goBack();
+				}
+			} else {				
+				if (this._index == 0) {
+					if (this._current() && this._current().getScreen().find('a[href$='+hash+']').length) {
+						this._goTo(hash);
+					} else {
+						document.location.hash = '';
+					}
+				} else {
+					if (this._current() && hash == this._current().getUrl()) {
+						return;
+					} else {
+						this._goBack();
+					}
+				}
 			}
 		},
 		/**
@@ -144,17 +168,30 @@
             this.url   = null;
             this.title = null;
             
+			this.setHash = function(hash) {
+				
+				if (document.location.hash.length == 0
+					&& hash.length == 0) {
+						return this;
+					}
+				
+                if (hash.length == 0) {
+                    hash = '#';
+                }
+				
+                document.location.hash = hash;
+                return this;
+			};
+			
             this.setUrl = function(url) {
                 this.url = url;
-                if (url.length == 0) {
-                    url = '#';
-                }
-                document.location.hash = url;
                 return this;
             };
+			
             this.getUrl = function() {
                 return this.url;
             };
+			
             this.setTitle = function(title) {
             	if (title) {
 	                title = title.replace(/<.*>/g, "");
@@ -183,6 +220,7 @@
 			 */
             this.load = function(url) {
                this.setUrl(url);
+               this.setHash(url);
         	   $.ajax({
         	       url:_self.url,
         	       dataType: "html",
@@ -190,7 +228,8 @@
                         _self.screen = $(html).find(manager.options.content);
 						_self.setTitle(_self.screen.find(manager.options.title).html());
                         _self.screen.css({
-							   top:-manager.options.height,
+							   top:0,
+							   position:'absolute',
                                left:manager.options.width,
 							   width:manager.options.width/*,
 							   height:manager.options.height*/
@@ -208,12 +247,17 @@
 								left: "-="+manager.options.width
 							});
 						}
-                        manager.element.parent().append(_self.screen);
-
-                        _self.screen.animate({left:0});
-                        
-                        // reinit all widgets
-                        iPhoneUI.initWidgets();
+						
+						manager.element.parent().append(_self.screen);
+						
+			            // reinit all widgets
+			            iPhoneUI.initWidgets();
+						
+						manager.element.parent().height(_self.screen.height());
+						
+						_self.screen.animate({left:0});
+						
+						console.log(_self.screen.height());
                    }
         	   });
             }

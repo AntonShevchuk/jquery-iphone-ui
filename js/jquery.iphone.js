@@ -15,6 +15,44 @@ iPhoneUI = {
 		// other widgets
 		'iGallery'
 	],
+	initInterface:function()
+	{
+		jQuery('.iphone .topbar').addClass('iphoneui')
+								 .append('<div class="iclockui"></div>');
+		iPhoneUI.updateClock(); 
+		// update clock every 30 second
+		setInterval('iPhoneUI.updateClock()', 1000 * 30 );
+	},
+	updateClock:function ( )
+	{
+		var currentTime = new Date ( );
+		
+		var currentHours = currentTime.getHours ( );
+		var currentMinutes = currentTime.getMinutes ( );
+		var currentSeconds = currentTime.getSeconds ( );
+		
+		// Pad the minutes and seconds with leading zeros, if required
+		currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+		currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+		
+		// Choose either "AM" or "PM" as appropriate
+		var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+		
+		// Convert the hours component to 12-hour format if needed
+		currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+		
+		// Convert an hours component of "0" to "12"
+		currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+		
+		// Compose the string for display
+		var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
+		
+		// Update the time display
+		jQuery('.iclockui').html(currentTimeString);
+		//document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+	},
+	
+	
 	/**
 	 * Try to initialize all loaded widgets
 	 */
@@ -39,6 +77,7 @@ iPhoneUI = {
 			$.getScript("http://iphone.hohli.com/js/ui/ui."+iPhoneUI.widgets[i]+".js");
 		}
 	},
+	
 	/**
 	 * Bind touch events
 	 */
@@ -82,6 +121,7 @@ iPhoneUI = {
 }
 
 jQuery(document).ready(function(){
+	iPhoneUI.initInterface();
 	iPhoneUI.initWidgets();
 	if ($.browser.safari) {
 		iPhoneUI.initTouchEvents();
