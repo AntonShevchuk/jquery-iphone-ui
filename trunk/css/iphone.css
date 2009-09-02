@@ -41,7 +41,7 @@
 }
 /*/Basic*/
 .iphone .display {
-    position:relative;
+	position:relative;
     display:block;
 }
 .iphone .screen{
@@ -64,17 +64,16 @@
     .iphone.vertical .topbar + .screen,
     .iphone.vertical .topbar + .screen      .scroll { height:460px }
 	
-	/* tabs=48px */
-	/*.iphone.vertical .topbar + .screen.tabs,*/
+	/* tabbar=48px */
+	.iphone.vertical .topbar + .screen.tabs,
     .iphone.vertical .topbar + .screen.tabs .scroll { height:412px }
 	
 	/* titlebar=45px */
     .iphone.vertical .topbar + .screen      .titlebar + .scroll { height:415px }
     .iphone.vertical .topbar + .screen.tabs .titlebar + .scroll { height:367px }
-	
+
     .iphone.vertical .screen      .titlebar + .scroll { height:435px }
     .iphone.vertical .screen.tabs .titlebar + .scroll { height:387px }
-
 
     .iphone.horizontal .topbar + .screen,
     .iphone.horizontal .topbar + .screen      .scroll { height:300px }
@@ -88,7 +87,7 @@
     .iphone.horizontal .screen      .titlebar + .scroll { height:275px }
     .iphone.horizontal .screen.tabs .titlebar + .scroll { height:227px }
 
-.iphone .screen.home {
+.iphone .display.home .screen{
     background:#000;
 }
 /*
@@ -101,19 +100,13 @@
     display:block;
     width:100%;
     height:20px;
+    background:#bbb url('images/topbar.png') repeat-x;
 }
-	.iphone.vertical .topbar {
-	    background: #bbb url('images/topbar-vertical.png') no-repeat;
-	}
-	.iphone.horizontal .topbar {
-	    background: #bbb url('images/topbar-horizontal.png') no-repeat;
-	}
-	.iphone .topbar.wifi {
-	    background-position:0 -20px;
-	}
-	.iphone .topbar.g3 {
-	    background-position:0 -40px;
-	}
+.iphone .display.home .topbar {
+	color:#fff;
+    background:#000 !important;
+}
+
 /*/TopBar*/
 /*TitleBar*/
 .iphone .titlebar{
@@ -196,12 +189,15 @@
 /*/Dock*/
 /*Tabs*/
 .iphone .tabbar {
-	position:absolute !important;
+	/*position:absolute !important;
     bottom:0;
-    left:0;	
+    left:0;	*/
+	position:relative;
+	top:-48px;
 }
 .iphone .tabs {
     position:relative;
+	height:480px;
 }
 .iphone .tab {
     position:relative;
@@ -528,6 +524,14 @@
 .iphoneui a:active, .iphoneui a:focus {
     outline: 0;
 }
+
+.iphoneui .iclockui {
+	font-weight:900;
+	width:54px;
+	margin:0 auto;
+	
+}
+
 /*Scroll*/
 .iscrollui{
     position:relative;
@@ -845,32 +849,3 @@
     }
 /*/Select*/
 /*/Form Elements*/
-/*iPhone*/
-@media only screen and (max-device-width: 480px) {
-	body {
-    	-webkit-user-select: none;       /*Determines whether a user can select the content of an element.*/
-		-webkit-touch-callout: none;     /*Disables the default callout shown when you touch and hold a touch target*/
-    	-webkit-text-size-adjust: 240%;  /*Specifies a size adjustment for displaying text content in Safari on iPhone*/
-		zoom:240%;
-	}
-	.iphone.vertical,
-	.iphone.horizontal,
-	.iphone .display  {
-		width:100% !important;
-		padding:0 !important;
-		background: none;
-	}
-	.iphone .phone,
-	.iphone .display,
-	.iphone .screen,
-	.iphone .scroll{
-		height:auto !important;
-		overflow-y:auto !important;
-		overflow-x:hidden;
-	}
-
-	.iphone .bigbutton {
-		display:none;
-	}
-}
-/*/iPhone*/
