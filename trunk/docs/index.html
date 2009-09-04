@@ -6,83 +6,111 @@
     <meta name="keywords" content="ajax, jquery, javascript, css, iphone, iphone interface, iphone ui" />
     <meta name="description" content="jQuery and CSS examples of iPhone interface" />
     <link rel="stylesheet" href="../css/style.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="../css/iphone.css" type='text/css' media='all' />
+	<link rel="stylesheet" href="../css/iphone-480.css" type='text/css' media='only screen and (max-device-width: 480px)' />
     <script type="text/javascript" src="../js/jquery.js"></script>
-    <style type="text/css">
-    body {
-    	width: 700px !important;
-    }
-    </style>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/jquery.iphone.js"></script>
+	
+    <script type="text/javascript" src="../js/other/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../js/other/jquery.disable.text.select.js"></script>
+    <script type="text/javascript" src="../js/other/jquery.backgroundPosition.js"></script>	
+    <script type="text/javascript" src="../js/other/jquery.dPassword.js"></script>
+	
+    <script type="text/javascript" src="../js/ui/ui.iMenu.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iMenuManager.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iTabs.js"></script>
+	
+    <script type="text/javascript" src="../js/ui/ui.iInput.js"></script>
+	<script type="text/javascript" src="../js/ui/ui.iPassword.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iCheckBox.js"></script>
+	<script type="text/javascript" src="../js/ui/ui.iRadioButton.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iSelect.js"></script>
+	
+    <script type="text/javascript" src="../js/ui/ui.iGallery.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.iScroll.js"></script>
+	<style type="text/css">
+		body {
+			background:#ccc;
+		}
+	</style>
 </head>
-<body>
-	<h1>jQuery iPhone UI</h1>
-	<p>
-		This is JavaScript library for prototype iPhone interface on web pages		
-	</p>
-	
-	<h2>Download</h2>
-	<a href="http://code.google.com/p/jquery-iphone-ui/downloads/list" title="Download">Download in archive</a>
-	<a href="http://code.google.com/p/jquery-iphone-ui/source/checkout" title="Source code">Source code (SVN)</a>
-	
-	<h2>Widgets</h2>
-    <h3>Menu</h3>
-	<p class="links">
-	    <a href="menu-docs.html" title="Menu Docs">Example with docs</a> | 
-	    <a href="menu.html" title="Menu">In iPhone GUI</a>
-	</p>
-	<p><img src="images/iMenu.png" alt="iMenu Widget" class="aligncenter"/></p>
-	
-    <h3>Tabs</h3>
-	<p class="links">
-	    <a href="tabs-docs.html" title="Tabs Docs">Example with docs</a> | 
-	    <a href="tabs.html" title="Tabs">In iPhone GUI</a>
-	</p>
-	<p><img src="images/iTabs.png" alt="iTabs Widget" class="aligncenter"/></p>
-	
-    <h3>Scrolling</h3>
-	<p class="links">
-	    <a href="scroll-docs.html" title="Scrolling Docs">Example with docsscroll-docs.html</a> | 
-		<a href="scroll.html" title="Scrolling">In iPhone GUI</a>
-	</p>
-	<p><img src="images/iScroll.png" alt="iScroll Widget" class="aligncenter"/></p>
-    
-    <h3>Gallery</h3>
-	<p class="links">
-	    <a href="gallery-docs.html" title="Gallery Docs">Example with docs</a> | 
-	    <a href="gallery.html" title="Gallery">In iPhone GUI</a>
-	</p>
-	<p><img src="images/iGallery.png" alt="iGallery Widget" class="aligncenter"/></p>
-    
-    <h3>Form elements</h3>
-	<p class="links">
-		<a href="elements.html" title="Form elements">In iPhone GUI</a>
-	</p>
-	<p>Consist of following widgets
-	<ul>
-		<li>iInput</li>
-		<li>iPassword</li>
-		<li>iCheckbox</li>
-		<li>iSelect</li>		
-	</ul>
-	</p>
-	
-	<p><img src="images/iForms.png" alt="Form Elements Widgets" class="aligncenter"/></p>
-	<p><img src="images/iSelect.png" alt="iSelect Widget" class="aligncenter"/></p>
-    
-	<h2>Examples</h2>
-	<p>
-		Examples of using iPhone UI w/out widgets
-	</p>
-	<ul>
-    	<li><a href="vertical.html" title="Homescreen Vertical">Homescreen Vertical</a></li>
-		<li><a href="horizontal.html" title="Homescreen Horizontal">Homescreen Horizontal</a></li>
-    	<li><a href="icons.html" title="Icons">Icons</a></li>
-        <li><a href="buttons.html" title="Buttons">Buttons</a></li>
-    	<li><a href="copy-paste.html" title="Copy/Paste">Copy/Paste</a></li>
-	</ul>
-	
-    <p>In interface I use 
-		<a href="http://www.teehanlax.com/blog/?p=1628" title="iPhone GUI PSD 3.0" rel="nofollow">iPhone GUI PSD 3.0</a> and 
-		<a href="http://glyphish.com/" title="iPhone toolbar icons" rel="nofollow">iPhone toolbar icons</a>
-	</p>
+<body class="iphone shadow">
+    <div class="titlebar">
+        jQuery iPhone UI
+    </div>
+    <div class="list">
+		<p>
+			This is JavaScript library for prototype iPhone interface on web pages		
+		</p>
+		
+		<h2>Download</h2>
+		<ul class="inlist">
+			<li><a href="http://code.google.com/p/jquery-iphone-ui/downloads/list" title="Download" class="external">Download in archive</a></li>
+			<li><a href="http://code.google.com/p/jquery-iphone-ui/source/checkout" title="Source code" class="external">Source code (SVN)</a></li>
+		</ul>
+		
+		<h2>Widgets</h2>
+	    <h3>Menu
+		    <a href="menu-docs.html" title="Menu Docs" class="external">Example with docs</a>
+		    <a href="menu.html" title="Menu" class="external">In iPhone GUI</a>
+		</h3>
+		<p><img src="images/iMenu.png" alt="iMenu Widget" class="aligncenter"/></p>
+		
+	    <h3>Tabs
+		    <a href="tabs-docs.html" title="Tabs Docs" class="external">Example with docs</a>
+		    <a href="tabs.html" title="Tabs" class="external">In iPhone GUI</a>
+		</h3>
+		<p><img src="images/iTabs.png" alt="iTabs Widget" class="aligncenter"/></p>
+		
+	    <h3>Scrolling
+		    <a href="scroll-docs.html" title="Scrolling Docs" class="external">Example with docs</a>
+			<a href="scroll.html" title="Scrolling" class="external">In iPhone GUI</a>
+		</h3>
+		<p><img src="images/iScroll.png" alt="iScroll Widget" class="aligncenter"/></p>
+	    
+	    <h3>Gallery
+		    <a href="gallery-docs.html" title="Gallery Docs" class="external">Example with docs</a>
+		    <a href="gallery.html" title="Gallery" class="external">In iPhone GUI</a>
+		</h3>
+		<p><img src="images/iGallery.png" alt="iGallery Widget" class="aligncenter"/></p>
+	    
+	    <h3>Form elements
+			<a href="elements.html" title="Form elements" class="external">In iPhone GUI</a>
+		</h3>
+		<p>Consist of following widgets
+		<ul class="inlist">
+			<li>iInput</li>
+			<li>iPassword</li>
+			<li>iCheckbox</li>
+			<li>iSelect</li>		
+		</ul>
+		</p>
+		
+		<p><img src="images/iForms.png" alt="Form Elements Widgets" class="aligncenter"/></p>
+		<p><img src="images/iSelect.png" alt="iSelect Widget" class="aligncenter"/></p>
+	    
+		<h2>Examples</h2>
+		<p>
+			Examples of using iPhone UI w/out widgets
+		</p>
+		<ul class="inlist">
+	    	<li><a href="vertical.html" title="Homescreen Vertical" class="external">Homescreen Vertical</a></li>
+			<li><a href="horizontal.html" title="Homescreen Horizontal" class="external">Homescreen Horizontal</a></li>
+	        <li><a href="buttons.html" title="Buttons" class="external">Buttons</a></li>
+	    	<li><a href="copy-paste.html" title="Copy/Paste" class="external">Copy/Paste</a></li>
+		</ul>
+		
+		<h3>Icons
+		    <a href="icons-docs.html" title="iIcons Docs" class="external">Example with docs</a>
+		    <a href="icons.html" title="iIcons" class="external">In iPhone GUI</a>
+		</h3>
+		<p><img src="images/iIcons.png" alt="iIcons set" class="aligncenter"/></p>
+		
+	    <p>In interface I use 
+			<a href="http://www.teehanlax.com/blog/?p=1628" title="iPhone GUI PSD 3.0" rel="nofollow" class="external">iPhone GUI PSD 3.0</a> and 
+			<a href="http://glyphish.com/" title="iPhone toolbar icons" rel="nofollow" class="external">iPhone toolbar icons</a>
+		</p>
+	</div>
 </body>
 </html>

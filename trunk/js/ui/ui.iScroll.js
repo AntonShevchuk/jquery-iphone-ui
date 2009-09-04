@@ -9,10 +9,18 @@
  */
 (function($){
     $.widget('ui.iScroll', {
+		 options:{
+		 	height:null
+		 },
          _init: function(){
              var _self = this;
              
-        	 this.height = this.element.outerHeight();
+			 if (!this.options.height) {
+			 	this.height = this.element.outerHeight();
+			 } else {
+			 	this.height = this.options.height;
+			 }
+        	 
 			 
              // build in dom
 			 this.element.addClass('iphoneui');
@@ -23,7 +31,7 @@
 
              this.container.css({height: this.height, overflow:'hidden'});
              this.element.css({height:'auto'});
-             
+			 
              // "global" variables
     		 this.difference = this.element.height() - this.height;
     		 if (this.difference <= 0) return;

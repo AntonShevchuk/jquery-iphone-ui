@@ -78,7 +78,7 @@
     .iphone.horizontal .topbar + .screen,
     .iphone.horizontal .topbar + .screen      .scroll { height:300px }
 	
-	/*.iphone.horizontal .topbar + .screen.tabs,*/
+	.iphone.horizontal .topbar + .screen.tabs,
     .iphone.horizontal .topbar + .screen.tabs .scroll { height:252px }
 	
     .iphone.horizontal .topbar + .screen      .titlebar + .scroll { height:255px }
@@ -188,13 +188,6 @@
 }
 /*/Dock*/
 /*Tabs*/
-.iphone .tabbar {
-	/*position:absolute !important;
-    bottom:0;
-    left:0;	*/
-	position:relative;
-	top:-48px;
-}
 .iphone .tabs {
     position:relative;
 	height:480px;
@@ -205,6 +198,10 @@
     left:0px;
     height:480px;
     width:100%
+}
+.iphone .tabbar {
+	position:relative;
+	top:-48px;
 }
 /*/Tabs*/
 
@@ -338,12 +335,11 @@
     font-size:12px;
     text-align:center;
 }
-.iphone .app a:hover{
-    background:url('app/64x64/glossy.png') 8px 8px no-repeat;
-}
-.iphone .app.upackinglist{
-    background:url('app/64x64/upackinglist.png') 8px 8px no-repeat;
-}
+	.iphone .app a:hover{
+	    background:url('app/64x64/glossy.png') 8px 8px no-repeat;
+	}
+
+.iphone .app.upackinglist { background:url('app/64x64/upackinglist.png') 8px 8px no-repeat }
 /*/Applications*/
 /*Buttons*/
 .iphone .bigbutton {
@@ -353,107 +349,9 @@
     height:64px;
     text-indent:-99999px;
 }
-.iphone.vertical .bigbutton {
-    left:170px;
-    bottom:42px;
-}.iphone.horizontal .bigbutton {
-    right:58px;
-    top:160px;
-}
-.iphone .button {
-    cursor:pointer;
-    font-size:1.3em;
-    font-weight:900;
-    display:block;
-    height:70px;
-    width:320px;
-    line-height:70px;
-    text-align:center;
-    text-shadow: #333 0px -1px 0px;
-    background-image:url('images/buttons.png');
-    background-repeat:no-repeat;
-}
-
-.iphone .green, .iphone .green a,
-.iphone .black, .iphone .black a,
-.iphone .red,   .iphone .red a{
-    color:#fff;
-}
-
-.iphone .button.green { background-position:0 0 }
-.iphone .button.green:active { background-position:0 -350px }
-
-.iphone .button.white { background-position:0 -70px }
-.iphone .button.white:active { background-position:0 -420px }
-
-.iphone .button.black { background-position:0 -140px }
-.iphone .button.black:active { background-position:0 -490px }
-
-.iphone .button.orange { background-position:0 -210px }
-.iphone .button.orange:active { background-position:0 -560px }
-
-.iphone .button.red { background-position:0 -280px }
-.iphone .button.red:active { background-position:0 -630px }
+.iphone.vertical .bigbutton   { left:170px; bottom:42px; }
+.iphone.horizontal .bigbutton { right:58px; top:160px;   }
 /*/Buttons*/
-/*Popup*/
-.iphone p.copypaste {
-    position:relative;
-}
-.iphone .popup {
-    position:absolute;
-    display:none;
-    z-index:200;
-}
-.iphone .popup.copypaste {
-    width:240px;
-    height:48px;
-    line-height:48px;
-    background:url('images/popup-copypaste.png') no-repeat 0 0;
-}
-
-.iphone .popup.copypaste .anchor {
-    position:absolute;
-    z-index:100;
-    bottom:-10px;
-    left:24px;
-    height:14px;
-    width:24px;
-    background:url('images/popup-copypaste-anchor.png') no-repeat 0 0;
-}
-
-.iphone .popup.copypaste ul{
-    width:100%;
-}
-.iphone .popup.copypaste li{
-    float:left;
-    font-weight:900;
-    text-shadow: #ccc 0px -1px 0px;
-    width:80px
-}
-.iphone .popup.copypaste li.separator{
-    background:url('images/popup-copypaste-separator.png') 0 0 no-repeat;
-    padding-left:1px;
-    margin-right:-1px;
-}
-.iphone .popup.copypaste li.separator a{
-    margin-right:1px;
-}
-.iphone .popup.copypaste li a{
-    color:#eee;
-    display:block;
-    text-align:center;
-}
-
-.iphone .popup.copypaste li.first a:hover{
-    background:url('images/popup-copypaste.png') no-repeat 0 -48px;
-}
-.iphone .popup.copypaste li a:hover{
-    background:url('images/popup-copypaste.png') no-repeat -32px -48px;
-}
-.iphone .popup.copypaste li.last a:hover{
-    background:url('images/popup-copypaste.png') no-repeat 100% -48px;
-}
-/*/Popup*/
 /*Editor*/
 .iphone .editor {
     width:340px;
@@ -479,11 +377,11 @@
 }
 
 .iphone .text ul,
-.iphone .text ol
-{
+.iphone .text ol {
+	
 }
-.iphone .text li
-{
+
+.iphone .text li {
 	list-style-position:inside;
 	list-style-type:circle !important;
 	padding-left:12px;
@@ -493,25 +391,57 @@
 .iphone .list {
 
 }
+.iphone .list h1,
+.iphone .list h2,
 .iphone .list h3 {
+	color: #fff;
+    text-indent: 12px;
+    text-shadow: #333 0 0 2px;
+    background: url(images/list-header.png) left top repeat-x;
+}
+.iphone .list h2 {
     padding:0;
     margin:0;
-    background: url(images/list-header.png) left top repeat-x;
-    color: #fff;
+    font-size:1.2em;
+    font-weight: 900;
+    height: 32px;
+    line-height: 32px;
+}
+.iphone .list h3 {
+	background-position: 0 -32px;
+    padding:0;
+    margin:0;
     font-size:1em;
     font-weight: 900;
-    text-indent: 12px;
-    text-shadow: #999 0 1px 0;
+    text-shadow: #555 0 0 1px;
     height: 24px;
     line-height: 24px;
 }
 
-.iphone .list li {
+.iphone .list h1 a,
+.iphone .list h2 a,
+.iphone .list h3 a{
+	float:right;
+	font-size:0.8em;
+	height:24px;
+	line-height:24px;
+	text-shadow: #555 0 0 0;
+}
+
+.iphone .list ul.inlist li {
     background: #efefef;
     border-top: solid 1px #ddd;
     text-indent: 12px;
     height: 40px;
     line-height: 40px;
+}
+
+.iphone .list p {
+    background: #f5f5f5;
+    border-top: solid 1px #ddd;
+    text-indent: 12px;
+    line-height: 16px;
+	padding:12px 0;
 }
 
 /*/List*/
@@ -529,9 +459,7 @@
 	font-weight:900;
 	width:54px;
 	margin:0 auto;
-	
 }
-
 /*Scroll*/
 .iscrollui{
     position:relative;
@@ -658,12 +586,16 @@
     background:url('images/tabbar.png') repeat-x 0 0;
 }
 .itabsui li {
+
     display:block;
     float:left;
     /*width:80px; setup in JS*/
-    height:48px;
+    height:48px !important;
 	padding:0;
 	margin:0;
+	background: none;
+    border: 0;
+    text-indent: 0;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -khtml-border-radius: 6px;
