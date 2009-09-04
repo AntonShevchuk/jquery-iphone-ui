@@ -28,56 +28,69 @@
     <script type="text/javascript">
     $(document).ready(function(){
 		// alternative method of init widget
-    	$(".scroll").iScroll();
+		// set height here
+    	$(".scroll").iScroll({height:200});
     });
     </script>
 	<style type="text/css">
-		.scroll {
-			height:200px;
-			margin:10px 0;			
+		body {
+			background:#ccc;
 		}
-	</style> 
+		.syntaxhighlighter {
+			margin: 0 !important;
+		}
+	</style>
 </head>
 
-<body>
-	<div class="docs">
-		Requried:
-			<ul>
-				<li>jQuery UI Core</li>
-				<li>Mousewheel Plugin</li>
-				<li>Fixed size for element (see source code of this is page)</li>
-			</ul>
+<body class="iphone shadow">
+    <div class="titlebar">
+        iScroll Widget
+    </div>
+    <div class="list">
+		<h2>Requried</h2>
+		<ul class="inlist">
+			<li>jQuery UI Core</li>
+			<li>Mousewheel Plugin</li>
+			<li>Fixed size for element (see source code of this is page)</li>
+		</ul>
 			
-		Optional:
-			<ul>
-			    <li>Disable Text Select Plugin</li>
-			</ul>
+		<h2>Optional</h2>
+		<ul class="inlist">
+		    <li>Disable Text Select Plugin</li>
+		</ul>
 			
-		Example:
-			<pre class="brush: xml;">
-			    &lt;link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' /&gt;
-			    &lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
-			    &lt;script type="text/javascript" src="js/jquery-ui.js"&gt;&lt;/script&gt;
-			    &lt;script type="text/javascript" src="js/jquery.disable.text.select.js"&gt;&lt;/script&gt;
-			    &lt;script type="text/javascript" src="js/jquery.mousewheel.js"&gt;&lt;/script&gt;
-			    &lt;script type="text/javascript" src="js/ui/ui.iScroll.js"&gt;&lt;/script&gt;
-				&lt;script type="text/javascript"&gt;
-			    $(document).ready(function(){
-					// jquery.iphone.js have autoloader, but you can use
-					// alternative method of init widget
-			    	$(".scroll").iScroll();
-			    });
-			    &lt;/script&gt;
-				&lt;style type="text/css"&gt;
-					.scroll {
-						height:200px;		
-					}
-				&lt;/style&gt;
-                &lt;div class="scroll"&gt;
-                Lorem ipsum ...
-                &lt;/div&gt;
-			</pre>
-	</div>
+		<h2>Options</h2>
+		<ul class="inlist">
+		    <li><strong>height</strong> - set height of element</li>
+		</ul>
+		
+		<h2>Example</h2>
+		<pre class="brush: xml;">
+		    &lt;link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' /&gt;
+		    &lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
+		    &lt;script type="text/javascript" src="js/jquery-ui.js"&gt;&lt;/script&gt;
+		    &lt;script type="text/javascript" src="js/jquery.disable.text.select.js"&gt;&lt;/script&gt;
+		    &lt;script type="text/javascript" src="js/jquery.mousewheel.js"&gt;&lt;/script&gt;
+		    &lt;script type="text/javascript" src="js/ui/ui.iScroll.js"&gt;&lt;/script&gt;
+			&lt;script type="text/javascript"&gt;
+		    $(document).ready(function(){
+				// jquery.iphone.js have autoloader, but you can use
+				// alternative method of init widget
+				// set height here
+		    	$(".scroll").iScroll({height:200});
+		    });
+		    &lt;/script&gt;
+			&lt;style type="text/css"&gt;
+				.scroll {
+				    /* or set height like this */
+					height:200px;		
+				}
+			&lt;/style&gt;
+            &lt;div class="scroll"&gt;
+            Lorem ipsum ...
+            &lt;/div&gt;
+		</pre>
+	<h2>Demo</h2>
     <div class="scroll" style="color:#005">
     	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia quam nec enim scelerisque porta.
@@ -177,6 +190,7 @@
 		malesuada fames ac turpis egestas. Curabitur faucibus rhoncus mi, sed dapibus nunc cursus vitae. Suspendisse
 		suscipit eros nec massa hendrerit lacinia. Sed condimentum est in massa molestie commodo.
 		</p>
+    </div>
     </div>
 </body>
 </html>

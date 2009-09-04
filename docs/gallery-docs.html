@@ -33,55 +33,63 @@
 			height:480px;
 		}
 	</style>
+	<style type="text/css">
+		body {
+			background:#ccc;
+		}
+		.syntaxhighlighter {
+			margin: 0 !important;
+		}
+	</style>
 </head>
 
-<body>
-	
-	
-	<div class="docs">
-		Requried:
-			<ul>
-				<li>jQuery UI Core</li>
-				<li>Fixed size in CSS</li>
-			</ul>
+<body class="iphone shadow">
+    <div class="titlebar">
+        iGallery Widget
+    </div>
+    <div class="list">
+		<h2>Requried</h2>
+		<ul class="inlist">
+			<li>jQuery UI Core</li>
+			<li>Fixed size in CSS</li>
+		</ul>
 			
-		Example:
-			<pre class="brush: xml;">
-			    &lt;link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' /&gt;
-			    &lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
-			    &lt;script type="text/javascript" src="js/jquery-ui.js"&gt;&lt;/script&gt;
-    			&lt;script type="text/javascript" src="js/ui/ui.iGallery.js"&gt;&lt;/script&gt;
-			    &lt;script type="text/javascript"&gt;
-				$(document).ready(function(){
-					// jquery.iphone.js have autoloader, but you can use
-					// alternative method of init widget
-			    	$('.gallery').iGallery();
-			    });
-			    &lt;/script&gt;
-				&lt;div class="gallery" style="width:320px;height:480px;"&gt;					
-				    &lt;img src="../app/upackinglist/images/home.jpg" alt="Home Screen"/&gt;
-				    &lt;img src="../app/upackinglist/images/list.jpg" alt=""/&gt;
-				    &lt;img src="../app/upackinglist/images/list_edit.jpg" alt=""/&gt;
-				    &lt;img src="../app/upackinglist/images/list_new.jpg" alt=""/&gt;
-				    &lt;img src="../app/upackinglist/images/pack_list.jpg" alt=""/&gt;
-				    &lt;img src="../app/upackinglist/images/pack_list_cats.jpg" alt=""/&gt;
-				    &lt;img src="../app/upackinglist/images/pack_list_edit.jpg" alt=""/&gt;
-				    &lt;img src="../app/upackinglist/images/pack_list_edit2.jpg" alt=""/&gt;
-					
-				&lt;/div&gt;
-			</pre>
+		<h2>Example</h2>
+		<pre class="brush: xml;">
+		    &lt;link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' /&gt;
+		    &lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
+		    &lt;script type="text/javascript" src="js/jquery-ui.js"&gt;&lt;/script&gt;
+			&lt;script type="text/javascript" src="js/ui/ui.iGallery.js"&gt;&lt;/script&gt;
+		    &lt;script type="text/javascript"&gt;
+			$(document).ready(function(){
+				// jquery.iphone.js have autoloader, but you can use
+				// alternative method of init widget
+		    	$('.gallery').iGallery();
+		    });
+		    &lt;/script&gt;
+			&lt;div class="gallery" style="width:320px;height:480px;"&gt;					
+			    &lt;img src="../app/upackinglist/images/home.jpg" alt="Home Screen"/&gt;
+			    &lt;img src="../app/upackinglist/images/list.jpg" alt=""/&gt;
+			    &lt;img src="../app/upackinglist/images/list_edit.jpg" alt=""/&gt;
+			    &lt;img src="../app/upackinglist/images/list_new.jpg" alt=""/&gt;
+			    &lt;img src="../app/upackinglist/images/pack_list.jpg" alt=""/&gt;
+			    &lt;img src="../app/upackinglist/images/pack_list_cats.jpg" alt=""/&gt;
+			    &lt;img src="../app/upackinglist/images/pack_list_edit.jpg" alt=""/&gt;
+			    &lt;img src="../app/upackinglist/images/pack_list_edit2.jpg" alt=""/&gt;
+				
+			&lt;/div&gt;
+		</pre>
+		<h2>Demo</h2>
+		<div class="gallery aligncenter">
+		    <img src="../app/upackinglist/images/home.jpg" alt="Home Screen"/>
+		    <img src="../app/upackinglist/images/list.jpg" alt=""/>
+		    <img src="../app/upackinglist/images/list_edit.jpg" alt=""/>
+		    <img src="../app/upackinglist/images/list_new.jpg" alt=""/>
+		    <img src="../app/upackinglist/images/pack_list.jpg" alt=""/>
+		    <img src="../app/upackinglist/images/pack_list_cats.jpg" alt=""/>
+		    <img src="../app/upackinglist/images/pack_list_edit.jpg" alt=""/>
+		    <img src="../app/upackinglist/images/pack_list_edit2.jpg" alt=""/>
+		</div>
 	</div>
-	
-	<div class="gallery">
-	    <img src="../app/upackinglist/images/home.jpg" alt="Home Screen"/>
-	    <img src="../app/upackinglist/images/list.jpg" alt=""/>
-	    <img src="../app/upackinglist/images/list_edit.jpg" alt=""/>
-	    <img src="../app/upackinglist/images/list_new.jpg" alt=""/>
-	    <img src="../app/upackinglist/images/pack_list.jpg" alt=""/>
-	    <img src="../app/upackinglist/images/pack_list_cats.jpg" alt=""/>
-	    <img src="../app/upackinglist/images/pack_list_edit.jpg" alt=""/>
-	    <img src="../app/upackinglist/images/pack_list_edit2.jpg" alt=""/>
-	</div>
-
 </body>
 </html>

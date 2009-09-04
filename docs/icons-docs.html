@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>iMenu Widget Documentation</title>
+    <title>100 iPhone Icons</title>
     <link rel="stylesheet" href="../css/style.css" type='text/css' media='all' />
     <link rel="stylesheet" href="../css/iphone.css" type='text/css' media='all' />
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/jquery-ui.js"></script>
     <script type="text/javascript" src="../js/jquery.iphone.js"></script>
     <script type="text/javascript" src="../js/ui/ui.iMenu.js"></script>
-		
+	
 	<!-- Highlight code -->
 	<script type="text/javascript" src="http://scripts.hohli.com/brush/shCore.js"></script>
 	<script type="text/javascript" src="http://scripts.hohli.com/brush/shBrushJScript.js"></script>
@@ -22,11 +22,6 @@
 		SyntaxHighlighter.all();
 	</script>
 	
-    <script type="text/javascript">
-    $(document).ready(function(){        
-        $(".menu").iMenu();
-    });
-    </script>
 	<style type="text/css">
 		body {
 			background:#ccc;
@@ -39,51 +34,30 @@
 
 <body class="iphone shadow">
     <div class="titlebar">
-        iGallery Widget
+        Icons
     </div>
     <div class="list">
 		<h2>Requried</h2>
 		<ul class="inlist">
-			<li>jQuery UI Core</li>
+			<li>jQuery UI CSS</li>
 		</ul>
-			
 		<h2>Example</h2>
 		<pre class="brush: xml;">
 		    &lt;link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' /&gt;
-		    &lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
-		    &lt;script type="text/javascript" src="js/jquery-ui.js"&gt;&lt;/script&gt;
-		    &lt;script type="text/javascript" src="js/ui/ui.iMenu.js"&gt;&lt;/script&gt;
-		    &lt;script type="text/javascript"&gt;
-			$(document).ready(function(){
-				// jquery.iphone.js have autoloader, but you can use
-				// alternative method of init widget
-		    	$(".menu").iMenu();
-		    });
-		    &lt;/script&gt;
-            &lt;ul class="menu"&gt;
-                &lt;li&gt;&lt;a href="#" title="Label 1" class="arrow"&gt;Label 1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#" title="Label 2"&gt;Label 2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#" title="Label 3"&gt;Label 3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#" title="Label 4"&gt;Label 4&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
+            &lt;a href="#" title="refresh" class="icon iicon"&gt;&lt;em class="ii-refresh"&gt;&lt;/em&gt;refresh&lt;/a&gt;
+            &lt;a href="#" title="redo" class="icon iicon"&gt;&lt;em class="ii-redo"&gt;&lt;/em&gt;redo&lt;/a&gt;
+            &lt;a href="#" title="loopback" class="icon iicon"&gt;&lt;em class="ii-loopback"&gt;&lt;/em&gt;loopback&lt;/a&gt;
+            &lt;a href="#" title="squiggle" class="icon iicon"&gt;&lt;em class="ii-refresh"&gt;&lt;/em&gt;squiggle&lt;/a&gt;
 		</pre>
-
 		<h2>Demo</h2>
-	    <ul class="menu">
-	        <li><a href="#" title="Label 1" class="arrow">Label 1</a></li>
-	        <li><a href="#" title="Label 2">Label 2</a></li>
-	        <li><a href="#" title="Label 3">Label 3</a></li>
-	        <li><a href="#" title="Label 4">Label 4</a></li>
-	    </ul>
-	    <ul class="menu">
-	        <li><a href="#" title="Label 1" class="arrow">Single element</a></li>
-	    </ul>
-	    <ul class="menu">
-	        <li><a href="#" title="Label 1" class="arrow">Label 1</a></li>
-	        <li><a href="#" title="Label 2">Label 2</a></li>
-	        <li><a href="#" title="Label 3">Label 3</a></li>
-	        <li><a href="#" title="Label 4">Label 4</a></li>
-	    </ul>
-	</div>
+		<ul class="imenu">
+            <li><a href="#" title="refresh" class="icon iicon"><em class="ii-refresh"></em>refresh</a></li>
+            <li><a href="#" title="redo" class="icon iicon"><em class="ii-redo"></em>redo</a></li>
+            <li><a href="#" title="loopback" class="icon iicon"><em class="ii-loopback"></em>loopback</a></li>
+            <li><a href="#" title="squiggle" class="icon iicon"><em class="ii-squiggle"></em>squiggle</a></li>
+        </ul>
+    </div>
+           
+
 </body>
 </html>
