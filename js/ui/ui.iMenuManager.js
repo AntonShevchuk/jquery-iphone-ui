@@ -257,7 +257,7 @@
 						
 						_self.screen.animate({left:0});
 						
-						console.log(_self.screen.height());
+						//console.log(_self.screen.height());
                    }
         	   });
             }

@@ -1,3 +1,14 @@
+/**
+ * jQuery iPhone UI Library
+ * http://iphone.hohli.com/
+ *
+ * Copyright 2010, Anton Shevchuk
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://docs.jquery.com/License
+ *
+ * @version 0.1
+ */
+
 iPhoneUI = {
 	widgets:[
 		// form widgets
