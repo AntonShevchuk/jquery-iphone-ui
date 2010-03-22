@@ -25,6 +25,9 @@
             var length = 0;
             var width  = $this.width();
             
+            // filter
+            this.frame.children('br,hr').remove();
+            
             // each image pack to div 
             this.frame.children().each(function(){
                 length++;
