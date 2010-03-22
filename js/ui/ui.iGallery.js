@@ -5,7 +5,7 @@
  * @copyright (c) 2009 jQuery iPhone UI (http://iphone.hohli.com)
  * @license   Dual licensed under the MIT (MIT-LICENSE.txt) and GPL (GPL-LICENSE.txt) licenses.
  * 
- * @version 0.1
+ * @version 0.2
  */
 (function($){
     $.widget('ui.iGallery', {
@@ -25,10 +25,11 @@
             var length = 0;
             var width  = $this.width();
             
-            // each image pack to div
-            $this.find('img').each(function(){
+            // each image pack to div 
+            this.frame.children().each(function(){
                 length++;
                 $(this).wrap('<div class="slide"></div>');
+                $(this).css({width:width});
             });
             
             this.oldX = 0;
